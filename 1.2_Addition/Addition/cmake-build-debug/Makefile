@@ -48,10 +48,10 @@ RM = /opt/clion-2019.2.1/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/student/OOP/1.2_Addition/Addition
+CMAKE_SOURCE_DIR = /home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Addition
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/student/OOP/1.2_Addition/Addition/cmake-build-debug
+CMAKE_BINARY_DIR = /home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Addition/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/OOP/1.2_Addition/Addition/cmake-build-debug/CMakeFiles /home/student/OOP/1.2_Addition/Addition/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Addition/cmake-build-debug/CMakeFiles /home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Addition/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/OOP/1.2_Addition/Addition/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Addition/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,6 +123,33 @@ Addition/fast:
 	$(MAKE) -f CMakeFiles/Addition.dir/build.make CMakeFiles/Addition.dir/build
 .PHONY : Addition/fast
 
+home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.o: home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.cpp.o
+
+.PHONY : home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.o
+
+# target to build an object file
+home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.cpp.o:
+	$(MAKE) -f CMakeFiles/Addition.dir/build.make CMakeFiles/Addition.dir/home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.cpp.o
+.PHONY : home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.cpp.o
+
+home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.i: home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.cpp.i
+
+.PHONY : home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.i
+
+# target to preprocess a source file
+home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.cpp.i:
+	$(MAKE) -f CMakeFiles/Addition.dir/build.make CMakeFiles/Addition.dir/home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.cpp.i
+.PHONY : home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.cpp.i
+
+home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.s: home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.cpp.s
+
+.PHONY : home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.s
+
+# target to generate assembly for a file
+home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.cpp.s:
+	$(MAKE) -f CMakeFiles/Addition.dir/build.make CMakeFiles/Addition.dir/home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.cpp.s
+.PHONY : home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Addition"
 	@echo "... edit_cache"
+	@echo "... home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.o"
+	@echo "... home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.i"
+	@echo "... home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

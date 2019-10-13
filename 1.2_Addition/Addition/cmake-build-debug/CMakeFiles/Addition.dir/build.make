@@ -43,10 +43,10 @@ RM = /opt/clion-2019.2.1/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/student/OOP/1.2_Addition/Addition
+CMAKE_SOURCE_DIR = /home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Addition
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/student/OOP/1.2_Addition/Addition/cmake-build-debug
+CMAKE_BINARY_DIR = /home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Addition/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Addition.dir/depend.make
@@ -59,28 +59,43 @@ include CMakeFiles/Addition.dir/flags.make
 
 CMakeFiles/Addition.dir/main.cpp.o: CMakeFiles/Addition.dir/flags.make
 CMakeFiles/Addition.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/student/OOP/1.2_Addition/Addition/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Addition.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Addition.dir/main.cpp.o -c /home/student/OOP/1.2_Addition/Addition/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Addition/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Addition.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Addition.dir/main.cpp.o -c /home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Addition/main.cpp
 
 CMakeFiles/Addition.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Addition.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/student/OOP/1.2_Addition/Addition/main.cpp > CMakeFiles/Addition.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Addition/main.cpp > CMakeFiles/Addition.dir/main.cpp.i
 
 CMakeFiles/Addition.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Addition.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/student/OOP/1.2_Addition/Addition/main.cpp -o CMakeFiles/Addition.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Addition/main.cpp -o CMakeFiles/Addition.dir/main.cpp.s
+
+CMakeFiles/Addition.dir/home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.cpp.o: CMakeFiles/Addition.dir/flags.make
+CMakeFiles/Addition.dir/home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.cpp.o: /home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Addition/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Addition.dir/home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Addition.dir/home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.cpp.o -c /home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.cpp
+
+CMakeFiles/Addition.dir/home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Addition.dir/home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.cpp > CMakeFiles/Addition.dir/home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.cpp.i
+
+CMakeFiles/Addition.dir/home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Addition.dir/home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.cpp -o CMakeFiles/Addition.dir/home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.cpp.s
 
 # Object files for target Addition
 Addition_OBJECTS = \
-"CMakeFiles/Addition.dir/main.cpp.o"
+"CMakeFiles/Addition.dir/main.cpp.o" \
+"CMakeFiles/Addition.dir/home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.cpp.o"
 
 # External object files for target Addition
 Addition_EXTERNAL_OBJECTS =
 
 Addition: CMakeFiles/Addition.dir/main.cpp.o
+Addition: CMakeFiles/Addition.dir/home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/test.cpp.o
 Addition: CMakeFiles/Addition.dir/build.make
 Addition: CMakeFiles/Addition.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/student/OOP/1.2_Addition/Addition/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Addition"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Addition/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Addition"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Addition.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -93,6 +108,6 @@ CMakeFiles/Addition.dir/clean:
 .PHONY : CMakeFiles/Addition.dir/clean
 
 CMakeFiles/Addition.dir/depend:
-	cd /home/student/OOP/1.2_Addition/Addition/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/student/OOP/1.2_Addition/Addition /home/student/OOP/1.2_Addition/Addition /home/student/OOP/1.2_Addition/Addition/cmake-build-debug /home/student/OOP/1.2_Addition/Addition/cmake-build-debug /home/student/OOP/1.2_Addition/Addition/cmake-build-debug/CMakeFiles/Addition.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Addition/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Addition /home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Addition /home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Addition/cmake-build-debug /home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Addition/cmake-build-debug /home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Addition/cmake-build-debug/CMakeFiles/Addition.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Addition.dir/depend
 
