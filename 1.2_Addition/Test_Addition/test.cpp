@@ -3,7 +3,7 @@
 
 TEST(Addition, AddPositiveNumbers_Test)
 {
-    EXPECT_EQ(5,Addition::add(1,3));
+    EXPECT_EQ(5,Addition::add(1,4));
 }
 
 TEST(Addition, AddNegativeNumbers_Test)

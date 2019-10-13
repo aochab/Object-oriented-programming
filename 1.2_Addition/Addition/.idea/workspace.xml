@@ -13,29 +13,34 @@
   <component name="ChangeListManager">
     <list default="true" id="4c39aeff-c47d-4d7c-ae6d-39abd0f22597" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Addition" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Addition" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Addition.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Addition.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Addition.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Addition.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Addition.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Addition.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Addition.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Addition.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Addition.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Addition.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Addition.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Addition.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Addition.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Addition.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Addition.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Addition.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Addition.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Addition.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Addition.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Addition.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Addition.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Addition.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_Addition/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_Addition/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeFiles/3.14.5/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeFiles/3.14.5/CMakeSystem.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeFiles/Addition.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeFiles/Addition.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeFiles/Addition.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeFiles/Addition.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeFiles/Addition.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeFiles/Addition.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeFiles/Addition.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeFiles/Test_Addition.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeFiles/Test_Addition.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeFiles/Test_Addition.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeFiles/Test_Addition.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeFiles/Test_Addition.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeFiles/Test_Addition.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeFiles/Test_Addition.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeFiles/Test_Addition.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeFiles/Test_Addition.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeFiles/Test_Addition.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeFiles/Test_Addition.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeFiles/Test_Addition.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeFiles/Test_Addition.dir/test.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeFiles/Test_Addition.dir/test.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/Test_Addition" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/Test_Addition" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/Test_Addition.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/Test_Addition.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_Addition/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_Addition/test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_Addition/test.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +59,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Test_Addition" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RunDashboard">
@@ -88,6 +93,7 @@
       <updated>1570969989468</updated>
       <workItem from="1570969990739" duration="144000" />
       <workItem from="1570972567145" duration="87000" />
+      <workItem from="1571003333206" duration="52000" />
     </task>
     <servers />
   </component>
@@ -99,7 +105,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
