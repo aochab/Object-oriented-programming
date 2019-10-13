@@ -1,3 +1,0 @@
-/home/student/OOP/1.2_Addition/Addition/CMakeFiles/rebuild_cache.dir
-/home/student/OOP/1.2_Addition/Addition/CMakeFiles/Addition.dir
-/home/student/OOP/1.2_Addition/Addition/CMakeFiles/edit_cache.dir

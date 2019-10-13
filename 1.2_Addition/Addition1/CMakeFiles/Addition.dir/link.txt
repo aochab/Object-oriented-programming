@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/Addition.dir/main.cpp.o  -o Addition  -L/home/student/OOP/1.2_Addition/Addition/../libaddition/build -Wl,-rpath,/home/student/OOP/1.2_Addition/Addition/../libaddition/build -l1_2_Addition 
