@@ -11,3 +11,14 @@ TextWrapper::TextWrapper(int columnsNumber) {
 int TextWrapper::columns() const {
     return this->columnsNumber;
 }
+
+std::string TextWrapper::result(std::string text) {
+    wrapText(text);
+    return buffor;
+}
+
+void TextWrapper::wrapText(std::string text) {
+    if(text.length() == 0){
+        buffor = text;
+    }
+}

@@ -24,5 +24,5 @@ TEST(TextWrapper, GetEmptyText){
     auto wrapper = TextWrapper{};
     std::string text = "";
 
-    EXPECT_EQ("",wrapper.result());
+    EXPECT_EQ("",wrapper.result(text));
 }
