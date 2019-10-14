@@ -26,3 +26,10 @@ TEST(TextWrapper, GetEmptyText){
 
     EXPECT_EQ("",wrapper.result(text));
 }
+
+TEST(TextWrapper, GetOneCharacter){
+    auto wrapper = TextWrapper{1};
+    std::string text = "a";
+
+    EXPECT_EQ("a",wrapper.result(text));
+}
