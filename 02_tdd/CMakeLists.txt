@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.10)
 project(02_tdd)
 
-set(HEADERS include/Dummy.h "include/TextWrapper .h")
-set(SOURCES src/Dummy.cpp "src/TextWrapper .cpp")
+set(HEADERS include/Dummy.h "include/TextWrapper.h")
+set(SOURCES src/Dummy.cpp "src/TextWrapper.cpp")
 
 add_library(02_tdd_lib ${HEADERS} ${SOURCES})
 target_include_directories(02_tdd_lib PUBLIC include)
