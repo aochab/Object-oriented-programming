@@ -33,3 +33,10 @@ TEST(TextWrapper, GetOneCharacter){
 
     EXPECT_EQ("a",wrapper.result(text));
 }
+
+TEST(TextWrapper, GetTwoCharactersOneColumn){
+    auto wrapper = TextWrapper{1};
+    std::string text = "ab";
+
+    EXPECT_EQ("a\nb",wrapper.result(text));
+}

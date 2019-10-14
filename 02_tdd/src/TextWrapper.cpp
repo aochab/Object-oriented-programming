@@ -23,9 +23,9 @@ void TextWrapper::wrapText(std::string text) {
     }
     else
     {
-        for(int i=0; i<text.length(); i++)
+        for(int i=0; i<text.length(); )
         {
-            buffor = text.substr(i,columnsNumber) + "\n";
+            buffor += text.substr(i,columnsNumber) + "\n";
             i+=columnsNumber;
         }
     }
