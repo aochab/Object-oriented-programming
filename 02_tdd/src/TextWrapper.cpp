@@ -18,7 +18,17 @@ std::string TextWrapper::result(std::string text) {
 }
 
 void TextWrapper::wrapText(std::string text) {
-    if(text.length() == 0){
+    if(text.length()){
         buffor = text;
     }
+    else
+    {
+        for(int i=0; i<text.length(); i++)
+        {
+            buffor = text.substr(i,columnsNumber) + "\n";
+            i+=columnsNumber;
+        }
+    }
+
+
 }
