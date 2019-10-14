@@ -1,7 +1,10 @@
 #include "TestIncludes.h"
 
 class TextWrapper {
-
+public:
+    int columns() const{
+        return 10;
+    }
 };
 
 TEST(TextWrapper, CreateInstance) {
