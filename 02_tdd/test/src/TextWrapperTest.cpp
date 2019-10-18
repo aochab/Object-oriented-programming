@@ -54,3 +54,10 @@ TEST(TextWrapper, GetThreeCharactersTwoCharacterColumn){
 
     EXPECT_EQ("ab\nc\n",wrapper.result(text));
 }
+
+TEST(TextWrapper, GetTextWithSpacesTwoCharacterColumn){
+    auto wrapper = TextWrapper{2};
+    std::string text = "ab   cd";
+
+    EXPECT_EQ("ab\ncd\n",wrapper.result(text));
+}
