@@ -31,7 +31,7 @@ TEST(TextWrapper, GetOneCharacter){
     auto wrapper = TextWrapper{1};
     std::string text = "a";
 
-    EXPECT_EQ("a",wrapper.result(text));
+    EXPECT_EQ("a\n",wrapper.result(text));
 }
 
 TEST(TextWrapper, GetTwoCharactersOneColumn){

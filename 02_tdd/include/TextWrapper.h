@@ -9,7 +9,8 @@ public:
     std::string result(std::string text);
 private:
     int columnsNumber;
-    std::string buffor;
+    std::string buffer;
 
     void wrapText(std::string text);
+    std::string removeSpaces(std::string *text);
 };

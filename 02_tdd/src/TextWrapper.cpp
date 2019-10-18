@@ -1,3 +1,4 @@
+#include <algorithm>
 #include "TextWrapper.h"
 
 TextWrapper::TextWrapper() {
@@ -14,20 +15,26 @@ int TextWrapper::columns() const {
 
 std::string TextWrapper::result(std::string text) {
     wrapText(text);
-    return buffor;
+    return buffer;
 }
 
 void TextWrapper::wrapText(std::string text) {
-    if(text.length() == (0 || 1)){
-        buffor = text;
+    removeSpaces(&text);
+    if(!text.length()){
+        buffer = text;
     }
     else
     {
         for(int i=0; i<text.length(); i+=columnsNumber)
         {
-            buffor += text.substr(i,columnsNumber) + "\n";
+            buffer += text.substr(i, columnsNumber) + "\n";
         }
     }
 
 
+}
+
+std::string TextWrapper::removeSpaces(std::string *text){
+    text->erase(std::remove_if(text->begin(),text->end(),isspace),text->end());
+    return *text;
 }
