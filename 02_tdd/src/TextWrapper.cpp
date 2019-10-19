@@ -23,39 +23,50 @@ void TextWrapper::wrapText(std::string text) {
     }
     else
     {
-        removeSpaces(&text);
-        for(int i=0; i<text.length(); i+=columnsNumber)
+        for(int i=0; i<text.length(); )
         {
-            buffer += text.substr(i, columnsNumber) + "\n";
+            std::string line = text.substr(i, columnsNumber);
+
+            i+=columnsNumber;
+            if((line.substr(0,1) == " ") || (line.substr(line.length()-1,1) == " ")) {
+                removeSpaces(&line);
+                if (line == "") continue;
+                while (line.length() < columnsNumber) {
+                    int missingLength = columnsNumber - line.length();
+
+                    if(i >= text.length()) break;
+                    line += text.substr(i, missingLength);
+                    i += missingLength;
+                }
+            }
+            buffer += line + "\n";
         }
     }
-
-
 }
 
 std::string TextWrapper::removeSpaces(std::string *text){
-    int checkSpaceIndex = columnsNumber-1;
+    int checkSpaceIndex = text->length()-1;
     int spaceCount = 0;
-    int startSpaceIndex = -1;
 
     while(text->substr(checkSpaceIndex,1) == " ") {
         spaceCount++;
-        checkSpaceIndex--;
+        if((--checkSpaceIndex) < 0 ) break;
     }
 
     if(spaceCount){
-        startSpaceIndex = columnsNumber-spaceCount;
+        int startSpaceIndex = text->length()-spaceCount;
+        text->erase(startSpaceIndex,spaceCount);
     }
 
-    checkSpaceIndex = columnsNumber;
+    checkSpaceIndex = 0;
+    spaceCount = 0;
     while(text->substr(checkSpaceIndex,1) == " "){
         spaceCount++;
         checkSpaceIndex++;
     }
 
     if(spaceCount){
-        if(startSpaceIndex == -1) startSpaceIndex = columnsNumber;
-        text->erase(startSpaceIndex,spaceCount);
+        text->erase(0,spaceCount);
     }
 
     return *text;

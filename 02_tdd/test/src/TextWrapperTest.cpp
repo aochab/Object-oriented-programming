@@ -3,9 +3,7 @@
 
 
 TEST(TextWrapper, CreateInstance) {
-
     auto wrapper = TextWrapper{};
-
 }
 
 TEST(TextWrapper, HasColumnsGetter){
@@ -78,7 +76,21 @@ TEST(TextWrapper,GetLongTextAndManyColumns){
               "sit amet, consect\n"
               "etur adipiscing e\n"
               "lit. Fusce at est\n"
-              "id purus dapibus\n"
+              "id purus dapibus \n"
+              "pulvinar.\n",
+              wrapper.result(text));
+}
+
+TEST(TextWrapper,GetLongTextAndManyColumns2){
+    auto wrapper = TextWrapper{17};
+    std::string text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+                       "Fusce at est id purus dapibus    pulvinar.";
+
+    EXPECT_EQ("Lorem ipsum dolor\n"
+              "sit amet, consect\n"
+              "etur adipiscing e\n"
+              "lit. Fusce at est\n"
+              "id purus dapibus \n"
               "pulvinar.\n",
               wrapper.result(text));
 }
