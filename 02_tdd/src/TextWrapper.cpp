@@ -28,52 +28,61 @@ void TextWrapper::wrapText(std::string text) {
         buffer = text;
     }
     else{
-        for(int i=0; i<text.length(); )
-        {
-            std::string line = text.substr(i, columnsNumber);
+        createLines(text);
+    }
+}
 
-            i+=columnsNumber;
-            if((line.substr(0,1) == " ") || (line.substr(line.length()-1,1) == " ")) {
-                removeSpaces(&line);
-                if (line == "") continue;
-                while (line.length() < columnsNumber) {
-                    int missingLength = columnsNumber - line.length();
+void TextWrapper::createLines(std::string text) {
+    for(int i=0; i<text.length(); )
+    {
+        std::string line = text.substr(i, columnsNumber);
 
-                    if(i >= text.length()) break;
-                    line += text.substr(i, missingLength);
-                    i += missingLength;
-                }
+        i+=columnsNumber;
+        if((line.substr(0,1) == " ") || (line.substr(line.length()-1,1) == " ")) {
+            removeSpaces(&line);
+            if (line == "") continue;
+            while (line.length() < columnsNumber) {
+                int missingLength = columnsNumber - line.length();
+
+                if(i >= text.length()) break;
+                line += text.substr(i, missingLength);
+                i += missingLength;
             }
+        }
 
-            if(divideWords) {
-                if (text.length() > 3) {
-                    int index = i;
-                    int wordSizeLeft = 0;
-                    int wordSizeRight = 0;
-                    while (isgraph(text[index++])) {
-                        wordSizeRight++;
-                    }
-                    index = i - 1;
-                    while (isgraph(text[index--])) {
-                        wordSizeLeft++;
-                    }
+        if(divideWords) {
+            divideLine(line,text,i);
+        }
+        buffer += line + "\n";
+    }
+}
 
-                    if (wordSizeRight) {
-                        if (((wordSizeLeft + wordSizeRight) <= 3) || (wordSizeLeft == 1 || (wordSizeLeft == 2))) {
-                            i -= wordSizeLeft;
-                            int spaceIndex = line.length() - wordSizeLeft;
-                            while (spaceIndex < columnsNumber) {
-                                line[spaceIndex++] = ' ';
-                            }
-                        } else {
-                            i -= 1;
-                            int divideIndex = line.length() - 1;
-                            line[divideIndex] = '-';
-                        }
-                    }
+void TextWrapper::divideLine(std::string &line, std::string text, int &i) {
+    if (text.length() > 3) {
+        int index = i;
+        int wordSizeLeft = 0;
+        int wordSizeRight = 0;
+        while (isgraph(text[index++])) {
+            wordSizeRight++;
+        }
+        index = i - 1;
+        while (isgraph(text[index--])) {
+            wordSizeLeft++;
+        }
+
+        if (wordSizeRight) {
+            if (((wordSizeLeft + wordSizeRight) <= 3) || (wordSizeLeft == 1 || (wordSizeLeft == 2))) {
+                i -= wordSizeLeft;
+                int spaceIndex = line.length() - wordSizeLeft;
+                while (spaceIndex < columnsNumber) {
+                    line[spaceIndex++] = ' ';
                 }
+            } else {
+                i -= 1;
+                int divideIndex = line.length() - 1;
+                line[divideIndex] = '-';
+
             }
-            buffer += line + "\n";
         }
     }
 }

@@ -14,5 +14,7 @@ private:
     std::string buffer;
 
     void wrapText(std::string text);
+    void createLines(std::string text);
+    void divideLine(std::string &line, std::string text, int &i);
     std::string removeSpaces(std::string *text);
 };

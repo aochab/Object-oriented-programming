@@ -16,8 +16,8 @@ int main(int argc, char* argv[])
                        " maximus mi vitae neque rutrum pharetra. Curabitur venenatis sapien"
                        " vel purus mollis sollicitudin.";
 
-    TextWrapper wrapper = TextWrapper{60};
-    //std::cout << wrapper.result(text);
+    TextWrapper wrapper = TextWrapper{60,true};
+    std::cout << wrapper.result(text);
 
 
     std::string text1 = "Te kormorany sa dziś nieustepliwe";
