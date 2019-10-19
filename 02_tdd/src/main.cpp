@@ -19,10 +19,9 @@ int main(int argc, char* argv[])
     TextWrapper wrapper = TextWrapper{60,true};
     std::cout << wrapper.result(text);
 
-
-    std::string text1 = "Te kormorany sa dziś nieustepliwe";
-
-    TextWrapper wrapper1 = TextWrapper{8};
+    std::string text1 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+    "Nunc est nulla, vulputate vel sodales nec, ornare vel nisi.";
+    TextWrapper wrapper1 = TextWrapper{15,true};
     std::cout << wrapper1.result(text1);
 
     return 0;

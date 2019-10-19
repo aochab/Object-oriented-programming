@@ -105,3 +105,20 @@ TEST(TextWrapper, DivideWords) {
               "sit amet\n",
               wrapper.result(text));
 }
+
+TEST(TextWrapper, DivideWords2) {
+    auto wrapper = TextWrapper{15,true};
+    std::string text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+                       "Nunc est nulla, vulputate vel sodales nec, ornare vel nisi.";
+
+    EXPECT_EQ("Lorem ipsum do-\n"
+              "lor sit amet,  \n"
+              "consectetur ad-\n"
+              "ipiscing elit. \n"
+              "Nunc est nulla,\n"
+              "vulputate vel  \n"
+              "sodales nec,   \n"
+              "ornare vel nis-\n"
+              "i.\n",
+              wrapper.result(text));
+}
