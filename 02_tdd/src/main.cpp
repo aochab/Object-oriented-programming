@@ -16,13 +16,16 @@ int main(int argc, char* argv[])
                        " maximus mi vitae neque rutrum pharetra. Curabitur venenatis sapien"
                        " vel purus mollis sollicitudin.";
 
-    TextWrapper wrapper = TextWrapper{60,true};
-    std::cout << wrapper.result(text);
+    TextWrapper wrapper = TextWrapper{60};
+    std::cout << wrapper.result(text) << std::endl << std::endl;
 
-    std::string text1 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
-    "Nunc est nulla, vulputate vel sodales nec, ornare vel nisi.";
-    TextWrapper wrapper1 = TextWrapper{15,true};
-    std::cout << wrapper1.result(text1);
+    std::cout << "With division of words:" << std::endl;
+
+    TextWrapper wrapperWithDivide = TextWrapper{60,true};
+    std::cout << wrapperWithDivide.result(text);
+
+
+
 
     return 0;
 }

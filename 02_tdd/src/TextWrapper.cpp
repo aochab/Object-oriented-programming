@@ -58,7 +58,7 @@ void TextWrapper::createLines(std::string text) {
 }
 
 void TextWrapper::divideLine(std::string &line, std::string text, int &i) {
-    if (text.length() > 3) {
+    if (line.length() > 3) {
         int index = i;
         int wordSizeLeft = 0;
         int wordSizeRight = 0;
