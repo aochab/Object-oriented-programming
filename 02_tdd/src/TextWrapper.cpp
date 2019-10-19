@@ -6,6 +6,12 @@ TextWrapper::TextWrapper() {
 
 TextWrapper::TextWrapper(int columnsNumber) {
     this->columnsNumber = columnsNumber;
+    this->divideWords = false;
+}
+
+TextWrapper::TextWrapper(int columnsNumber, bool divideWords) {
+    this->columnsNumber = columnsNumber;
+    this->divideWords = divideWords;
 }
 
 int TextWrapper::columns() const {
@@ -36,6 +42,35 @@ void TextWrapper::wrapText(std::string text) {
                     if(i >= text.length()) break;
                     line += text.substr(i, missingLength);
                     i += missingLength;
+                }
+            }
+
+            if(divideWords) {
+                if (text.length() > 3) {
+                    int index = i;
+                    int wordSizeLeft = 0;
+                    int wordSizeRight = 0;
+                    while (isgraph(text[index++])) {
+                        wordSizeRight++;
+                    }
+                    index = i - 1;
+                    while (isgraph(text[index--])) {
+                        wordSizeLeft++;
+                    }
+
+                    if (wordSizeRight) {
+                        if (((wordSizeLeft + wordSizeRight) <= 3) || (wordSizeLeft == 1 || (wordSizeLeft == 2))) {
+                            i -= wordSizeLeft;
+                            int spaceIndex = line.length() - wordSizeLeft;
+                            while (spaceIndex < columnsNumber) {
+                                line[spaceIndex++] = ' ';
+                            }
+                        } else {
+                            i -= 1;
+                            int divideIndex = line.length() - 1;
+                            line[divideIndex] = '-';
+                        }
+                    }
                 }
             }
             buffer += line + "\n";

@@ -60,6 +60,7 @@ TEST(TextWrapper, GetTextWithSpacesTwoCharacterColumn){
     EXPECT_EQ("ab\ncd\n",wrapper.result(text));
 }
 
+
 TEST(TextWrapper,GetTextWithSpacesAndSaveThem){
     auto wrapper = TextWrapper{8};
     std::string text = "Lorem ipsum dolor";
@@ -96,7 +97,7 @@ TEST(TextWrapper,GetLongTextAndManyColumns2){
 }
 
 TEST(TextWrapper, DivideWords) {
-    auto wrapper = TextWrapper{9};
+    auto wrapper = TextWrapper{9,true};
     std::string text = "Lorem ipsum dolor sit amet";
 
     EXPECT_EQ("Lorem ip-\n"
