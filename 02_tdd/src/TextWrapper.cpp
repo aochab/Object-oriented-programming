@@ -21,8 +21,7 @@ void TextWrapper::wrapText(std::string text) {
     if(text.length() < columnsNumber){
         buffer = text;
     }
-    else
-    {
+    else{
         for(int i=0; i<text.length(); )
         {
             std::string line = text.substr(i, columnsNumber);
