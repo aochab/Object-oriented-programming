@@ -94,3 +94,13 @@ TEST(TextWrapper,GetLongTextAndManyColumns2){
               "pulvinar.\n",
               wrapper.result(text));
 }
+
+TEST(TextWrapper, DivideWords) {
+    auto wrapper = TextWrapper{9};
+    std::string text = "Lorem ipsum dolor sit amet";
+
+    EXPECT_EQ("Lorem ip-\n"
+              "sum dolor\n"
+              "sit amet\n",
+              wrapper.result(text));
+}
