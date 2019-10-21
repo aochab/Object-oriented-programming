@@ -143,13 +143,14 @@ TEST(VectorVectorVectorFloat, ThreeDimensionalVector) {
 
 TEST(ArrayInt, FillWithTheSameValue) {
 
-    // TODO: ...
+    std::array<int,1000> array{};
+    array.fill(0);
 
     for (auto i = 0u; i < 1000; i++) {
         ASSERT_EQ(0, array[i]);
     }
 
-    // TODO: ...
+    array.fill(7);
 
     for (auto i = 0u; i < 1000; i++) {
         ASSERT_EQ(7, array[i]);
