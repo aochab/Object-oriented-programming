@@ -1,6 +1,7 @@
 #include "TestIncludes.h"
 #include <vector>
 #include <list>
+#include <forward_list>
 
 TEST(VectorInt, CreateInitialized) {
 
@@ -259,7 +260,7 @@ TEST(ListInt, MergeSortedLists) {
 
 TEST(ForwardListFloat, InsertElementAfterIndex) {
 
-    // TODO: ...
+    std::forward_list<float> forwardList{1,2,3,4};
 
     auto iter = forwardList.begin();
     EXPECT_EQ(1, *(iter++));
@@ -268,7 +269,10 @@ TEST(ForwardListFloat, InsertElementAfterIndex) {
     EXPECT_EQ(4, *(iter++));
     EXPECT_EQ(forwardList.end(), iter);
 
-    // TODO: ...
+    iter = forwardList.begin();
+    *(iter++);
+
+    forwardList.insert_after(iter,10);
 
     iter = forwardList.begin();
     EXPECT_EQ(1, *(iter++));
