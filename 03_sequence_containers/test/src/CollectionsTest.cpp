@@ -67,7 +67,8 @@ TEST(VectorInt, SizeShouldBeLessThanOrEqualToCapacity) {
 
 TEST(VectorFloat, CopyToOtherVectorUsingAssign) {
 
-    // TODO: ...
+    std::vector<int> input{1,2,3};
+    std::vector<int> output{};
 
     ASSERT_EQ(3u, input.size());
     EXPECT_EQ(1, input[0]);
@@ -76,7 +77,9 @@ TEST(VectorFloat, CopyToOtherVectorUsingAssign) {
 
     ASSERT_TRUE(output.empty());
 
-    // TODO: ...
+    std::vector<int>::iterator it;
+    it=input.begin()+1;
+    output.assign(it,input.end());
 
     ASSERT_EQ(2u, output.size());
     EXPECT_EQ(2, output[0]);
