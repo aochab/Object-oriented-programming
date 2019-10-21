@@ -156,7 +156,7 @@ TEST(ArrayInt, FillWithTheSameValue) {
         ASSERT_EQ(7, array[i]);
     }
 }
-/*
+
 TEST(ArrayInt, SizeDefinedAtCompileTime) {
 
     // TODO: ...
@@ -168,7 +168,7 @@ TEST(ArrayInt, SizeDefinedAtCompileTime) {
     ASSERT_EQ(3u, array[2]);
     ASSERT_EQ(4u, array[3]);
 }
-
+/*
 TEST(ArrayInt, Sort) {
 
     // TODO: ...
