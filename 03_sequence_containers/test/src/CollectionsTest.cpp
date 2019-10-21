@@ -299,7 +299,7 @@ TEST(DequeInt, RemoveFirstElement) {
     EXPECT_FLOAT_EQ(2, deque[0]);
     EXPECT_FLOAT_EQ(3, deque[1]);
 }
-/*
+
 TEST(StackInt, PushAndPop) {
 
     // TODO: ...
@@ -320,7 +320,7 @@ TEST(StackInt, PushAndPop) {
 
     ASSERT_EQ(0u, stack.size());
 }
-
+/*
 TEST(PriorityQueueChar, PushAndPop) {
 
     // TODO: ...
