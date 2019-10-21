@@ -35,9 +35,9 @@ TEST(VectorDouble, CreateEmptyAndAddValuesAtTheEnd) {
 
 TEST(VectorFloat, CreateUsingInitializerList) {
 
-    std::initializer_list<int> init = {10,20,30};
+    std::initializer_list<int> init{10,20,30};
     std::vector<int> vector{init};
-
+    //TU MOZNA INACZEJ jakos std::initializer_list<int> vector {10,20,30}; ale cos nie dzialalo
     ASSERT_EQ(3u, vector.size());
     EXPECT_FLOAT_EQ(10, vector[0]);
     EXPECT_FLOAT_EQ(20, vector[1]);
@@ -295,7 +295,7 @@ TEST(DequeInt, RemoveFirstElement) {
     EXPECT_FLOAT_EQ(2, deque[1]);
     EXPECT_FLOAT_EQ(3, deque[2]);
 
-    deque.erase(deque.begin());
+    deque.pop_front();
 
     ASSERT_EQ(2u, deque.size());
     EXPECT_FLOAT_EQ(2, deque[0]);
