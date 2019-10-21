@@ -256,7 +256,7 @@ TEST(ListInt, MergeSortedLists) {
     EXPECT_EQ(6, *(iter++));
     EXPECT_EQ(a.end(), iter);
 }
-/*
+
 TEST(ForwardListFloat, InsertElementAfterIndex) {
 
     // TODO: ...
@@ -278,7 +278,7 @@ TEST(ForwardListFloat, InsertElementAfterIndex) {
     EXPECT_EQ(4, *(iter++));
     EXPECT_EQ(forwardList.end(), iter);
 }
-
+/*
 TEST(DequeInt, RemoveFirstElement) {
 
     // TODO: ...
