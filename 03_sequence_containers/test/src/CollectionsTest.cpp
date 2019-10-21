@@ -190,7 +190,7 @@ TEST(ArrayInt, Sort) {
 
 TEST(ArrayChar, CreateCopy) {
 
-    // TODO: ...
+    std::array<char,5> arrayIn{'a','b','c','d','\0'};
 
     ASSERT_EQ(5u, arrayIn.size());
     ASSERT_EQ('a', arrayIn[0]);
@@ -200,7 +200,7 @@ TEST(ArrayChar, CreateCopy) {
     ASSERT_EQ('\0', arrayIn[4]);
     EXPECT_STREQ("abcd", arrayIn.data());
 
-    // TODO: ...
+    std::array<char,5> arrayOut = arrayIn;
 
     ASSERT_EQ(5u, arrayIn.size());
     EXPECT_STREQ("abcd", arrayIn.data());
