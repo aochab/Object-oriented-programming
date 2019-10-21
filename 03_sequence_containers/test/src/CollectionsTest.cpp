@@ -4,6 +4,7 @@
 #include <forward_list>
 #include <deque>
 #include <stack>
+#include <queue>
 
 TEST(VectorInt, CreateInitialized) {
 
@@ -321,40 +322,40 @@ TEST(StackInt, PushAndPop) {
 
     ASSERT_EQ(0u, stack.size());
 }
-/*
+
 TEST(PriorityQueueChar, PushAndPop) {
 
-    // TODO: ...
+    std::priority_queue<char> priority_queue;
 
     ASSERT_TRUE(priority_queue.empty());
 
-    // TODO: ...
+    priority_queue.push(1);
+    priority_queue.push(3);
 
     ASSERT_EQ(2u, priority_queue.size());
     EXPECT_EQ(3, priority_queue.top());
 
-    // TODO: ...
+    priority_queue.push(2);
+    priority_queue.push(4);
 
     ASSERT_EQ(4u, priority_queue.size());
     EXPECT_EQ(4, priority_queue.top());
 
-    // TODO: ...
+    priority_queue.pop();
 
     ASSERT_EQ(3u, priority_queue.size());
     EXPECT_EQ(3, priority_queue.top());
 
-    // TODO: ...
+    priority_queue.pop();
 
     ASSERT_EQ(2u, priority_queue.size());
     EXPECT_EQ(2, priority_queue.top());
 
-    // TODO: ...
+    priority_queue.pop();
 
     ASSERT_EQ(1u, priority_queue.size());
     EXPECT_EQ(1, priority_queue.top());
 
-    // TODO: ...
-
+    priority_queue.pop();
     ASSERT_TRUE(priority_queue.empty());
 }
-*/
