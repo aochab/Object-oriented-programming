@@ -38,7 +38,7 @@ TEST(VectorFloat, CreateUsingInitializerList) {
     EXPECT_FLOAT_EQ(20, vector[1]);
     EXPECT_FLOAT_EQ(30, vector[2]);
 }
-/*
+
 TEST(VectorInt, SizeShouldBeLessThanOrEqualToCapacity) {
 
     // TODO: ...
@@ -64,6 +64,7 @@ TEST(VectorInt, SizeShouldBeLessThanOrEqualToCapacity) {
     EXPECT_EQ(vector.capacity(), vector.size());
 }
 
+/*
 TEST(VectorFloat, CopyToOtherVectorUsingAssign) {
 
     // TODO: ...
