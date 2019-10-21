@@ -168,7 +168,7 @@ TEST(ArrayInt, SizeDefinedAtCompileTime) {
     ASSERT_EQ(3u, array[2]);
     ASSERT_EQ(4u, array[3]);
 }
-/*
+
 TEST(ArrayInt, Sort) {
 
     // TODO: ...
@@ -187,7 +187,7 @@ TEST(ArrayInt, Sort) {
     EXPECT_EQ(4, array[3]);
     EXPECT_EQ(5, array[4]);
 }
-
+/*
 TEST(ArrayChar, CreateCopy) {
 
     // TODO: ...
