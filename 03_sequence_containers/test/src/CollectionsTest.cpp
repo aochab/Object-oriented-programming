@@ -227,7 +227,8 @@ TEST(ListFloat, Sort) {
 
 TEST(ListInt, MergeSortedLists) {
 
-    // TODO: ...
+    std::list<int> a{1,3,5};
+    std::list<int> b{2,4,6};
 
     auto iter = a.begin();
     EXPECT_EQ(1, *(iter++));
@@ -240,7 +241,9 @@ TEST(ListInt, MergeSortedLists) {
     EXPECT_EQ(6, *(iter++));
     EXPECT_EQ(b.end(), iter);
 
-    // TODO: ...
+    auto it = a.begin();
+    a.splice(it,b);
+    a.sort();
 
     EXPECT_EQ(0, b.size());
     EXPECT_EQ(6, a.size());
