@@ -10,7 +10,7 @@ TEST(VectorInt, CreateInitialized) {
     EXPECT_EQ(2, vector[1]);
     EXPECT_EQ(3, vector[2]);
 }
-/*
+
 TEST(VectorDouble, CreateEmptyAndAddValuesAtTheEnd) {
 
     // TODO: ...
@@ -25,7 +25,7 @@ TEST(VectorDouble, CreateEmptyAndAddValuesAtTheEnd) {
     EXPECT_DOUBLE_EQ(13, vector[1]);
     EXPECT_DOUBLE_EQ(17, vector[2]);
 }
-
+/*
 TEST(VectorFloat, CreateUsingInitializerList) {
 
     // TODO: ...
