@@ -1,5 +1,6 @@
 #include "TestIncludes.h"
 #include <vector>
+#include <list>
 
 TEST(VectorInt, CreateInitialized) {
 
@@ -210,12 +211,15 @@ TEST(ArrayChar, CreateCopy) {
 
 TEST(ListFloat, Sort) {
 
-    // TODO: ...
+    std::list<float> list{};
+    for( int i=0; i<1000; i++){
+        list.push_back(rand());
+    }
 
     ASSERT_EQ(1000, list.size());
     EXPECT_FALSE(std::is_sorted(list.begin(), list.end()));
 
-    // TODO: ...
+    list.sort();
 
     ASSERT_EQ(1000, list.size());
     EXPECT_TRUE(std::is_sorted(list.begin(), list.end()));
