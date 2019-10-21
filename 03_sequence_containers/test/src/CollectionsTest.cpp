@@ -187,7 +187,7 @@ TEST(ArrayInt, Sort) {
     EXPECT_EQ(4, array[3]);
     EXPECT_EQ(5, array[4]);
 }
-/*
+
 TEST(ArrayChar, CreateCopy) {
 
     // TODO: ...
@@ -207,7 +207,7 @@ TEST(ArrayChar, CreateCopy) {
     ASSERT_EQ(5u, arrayOut.size());
     EXPECT_STREQ("abcd", arrayOut.data());
 }
-
+/*
 TEST(ListFloat, Sort) {
 
     // TODO: ...
