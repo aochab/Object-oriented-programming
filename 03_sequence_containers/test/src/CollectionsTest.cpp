@@ -171,7 +171,7 @@ TEST(ArrayInt, SizeDefinedAtCompileTime) {
 
 TEST(ArrayInt, Sort) {
 
-    // TODO: ...
+    std::array<int,5> array{5,3,4,1,2};
 
     EXPECT_EQ(5, array[0]);
     EXPECT_EQ(3, array[1]);
@@ -179,7 +179,7 @@ TEST(ArrayInt, Sort) {
     EXPECT_EQ(1, array[3]);
     EXPECT_EQ(2, array[4]);
 
-    // TODO: ...
+    std::sort(std::begin(array),std::end(array));
 
     EXPECT_EQ(1, array[0]);
     EXPECT_EQ(2, array[1]);
