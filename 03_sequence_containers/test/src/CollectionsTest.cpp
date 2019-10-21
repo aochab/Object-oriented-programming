@@ -159,7 +159,7 @@ TEST(ArrayInt, FillWithTheSameValue) {
 
 TEST(ArrayInt, SizeDefinedAtCompileTime) {
 
-    // TODO: ...
+    std::array<int,4> array{1,2,3,4};
 
     static_assert(array.size() == 4, "Compilation error: wrong array size");
 
