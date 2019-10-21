@@ -90,7 +90,7 @@ TEST(VectorFloat, CopyToOtherVectorUsingAssign) {
     EXPECT_EQ(2, input[1]);
     EXPECT_EQ(3, input[2]);
 }
-/*
+
 TEST(VectorFloat, EraseFrontValue) {
 
     // TODO: ...
@@ -106,7 +106,7 @@ TEST(VectorFloat, EraseFrontValue) {
     EXPECT_FLOAT_EQ(2, vector[0]);
     EXPECT_FLOAT_EQ(3, vector[1]);
 }
-
+/*
 TEST(VectorVectorVectorFloat, ThreeDimensionalVector) {
 
     // TODO: ...
