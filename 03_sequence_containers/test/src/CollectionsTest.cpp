@@ -207,7 +207,7 @@ TEST(ArrayChar, CreateCopy) {
     ASSERT_EQ(5u, arrayOut.size());
     EXPECT_STREQ("abcd", arrayOut.data());
 }
-/*
+
 TEST(ListFloat, Sort) {
 
     // TODO: ...
@@ -220,7 +220,7 @@ TEST(ListFloat, Sort) {
     ASSERT_EQ(1000, list.size());
     EXPECT_TRUE(std::is_sorted(list.begin(), list.end()));
 }
-
+/*
 TEST(ListInt, MergeSortedLists) {
 
     // TODO: ...
