@@ -13,12 +13,14 @@ TEST(VectorInt, CreateInitialized) {
 
 TEST(VectorDouble, CreateEmptyAndAddValuesAtTheEnd) {
 
-    // TODO: ...
+    std::vector<int> vector{};
 
     ASSERT_EQ(0u, vector.size());
     ASSERT_TRUE(vector.empty());
 
-    // TODO: ...
+    vector.push_back(11);
+    vector.push_back(13);
+    vector.push_back(17);
 
     ASSERT_EQ(3u, vector.size());
     EXPECT_DOUBLE_EQ(11, vector[0]);
