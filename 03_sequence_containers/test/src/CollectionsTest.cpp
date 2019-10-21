@@ -3,7 +3,7 @@
 
 TEST(VectorInt, CreateInitialized) {
 
-
+    std::vector<int> vector{1,2,3};
 
     ASSERT_EQ(3u, vector.size());
     EXPECT_EQ(1, vector[0]);
