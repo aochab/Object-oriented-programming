@@ -140,7 +140,7 @@ TEST(VectorVectorVectorFloat, ThreeDimensionalVector) {
     EXPECT_FLOAT_EQ(7, vector[1][1][0]);
     EXPECT_FLOAT_EQ(8, vector[1][1][1]);
 }
-/*
+
 TEST(ArrayInt, FillWithTheSameValue) {
 
     // TODO: ...
@@ -155,7 +155,7 @@ TEST(ArrayInt, FillWithTheSameValue) {
         ASSERT_EQ(7, array[i]);
     }
 }
-
+/*
 TEST(ArrayInt, SizeDefinedAtCompileTime) {
 
     // TODO: ...
