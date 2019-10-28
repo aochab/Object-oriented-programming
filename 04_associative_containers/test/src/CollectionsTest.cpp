@@ -212,7 +212,7 @@ TEST(SetInt, ElementsGreaterThanGivenValue) {
     EXPECT_EQ(5, *iter++);
     EXPECT_EQ(set.end(), iter);
 }
-/*
+
 TEST(MapStringString, CreateUsingInitializerList) {
 
     // TODO: ....
@@ -222,7 +222,7 @@ TEST(MapStringString, CreateUsingInitializerList) {
     EXPECT_EQ("Greece", map["GR"]);
     EXPECT_EQ("France", map["FR"]);
 }
-
+/*
 TEST(MapMapStringInt, NestedCollections) {
 
     // TODO: ....
