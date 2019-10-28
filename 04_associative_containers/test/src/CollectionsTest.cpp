@@ -143,7 +143,7 @@ TEST(SetInt, InvalidComparatorThatCausesMultipleCopiesOfTheSameElementToBeInsert
 
     ASSERT_EQ(2u, set.size());
 }
-/*
+
 TEST(SetValue, CustomTypeAndComparator) {
 
     struct Value {
@@ -184,7 +184,7 @@ TEST(SetValue, CustomTypeAndComparator) {
     EXPECT_EQ(1u, set.count(Value{3, 3}));
     EXPECT_EQ(1u, set.count(Value{6, 6}));
 }
-
+/*
 TEST(SetInt, ElementsGreaterThanGivenValue) {
 
     // TODO: ....
