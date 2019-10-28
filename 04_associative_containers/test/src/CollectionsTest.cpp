@@ -100,7 +100,7 @@ TEST(SetString, ElementsSortedInReversedAplhabeticalOrderWhenIterating) {
 }
 
 
-/*
+
 TEST(SetInt, InvalidComparatorThatCausesOnlyOneElementToBeInserted) {
 
     struct Comparator {
@@ -120,6 +120,7 @@ TEST(SetInt, InvalidComparatorThatCausesOnlyOneElementToBeInserted) {
     ASSERT_EQ(1u, set.size());
 }
 
+/*
 TEST(SetInt, InvalidComparatorThatCausesMultipleCopiesOfTheSameElementToBeInserted) {
 
     struct Comparator {
