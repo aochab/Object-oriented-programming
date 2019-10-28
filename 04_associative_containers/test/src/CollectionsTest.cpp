@@ -122,7 +122,7 @@ TEST(SetInt, InvalidComparatorThatCausesOnlyOneElementToBeInserted) {
     ASSERT_EQ(1u, set.size());
 }
 
-/*
+
 TEST(SetInt, InvalidComparatorThatCausesMultipleCopiesOfTheSameElementToBeInserted) {
 
     struct Comparator {
@@ -141,7 +141,7 @@ TEST(SetInt, InvalidComparatorThatCausesMultipleCopiesOfTheSameElementToBeInsert
 
     ASSERT_EQ(2u, set.size());
 }
-
+/*
 TEST(SetValue, CustomTypeAndComparator) {
 
     struct Value {
