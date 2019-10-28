@@ -216,7 +216,7 @@ TEST(SetInt, ElementsGreaterThanGivenValue) {
 
 TEST(MapStringString, CreateUsingInitializerList) {
 
-    std::map<std::string,std::string> map;
+    std::map<std::string,std::string> map{};
     map.insert({"CN","China"});
     map.insert({"GR","Greece"});
     map.insert({"FR","France"});
@@ -229,7 +229,7 @@ TEST(MapStringString, CreateUsingInitializerList) {
 
 TEST(MapMapStringInt, NestedCollections) {
 
-    // TODO: ....
+    std::map<std::string,std::map<std::string,int>> map{};
 
     ASSERT_TRUE(map.empty());
 
