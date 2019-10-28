@@ -69,7 +69,7 @@ TEST(SetDouble, ElementsSortedWhenIterating) {
     EXPECT_EQ(4.4, *iter++);
     EXPECT_EQ(set.end(), iter);
 }
-/*
+
 TEST(SetString, ElementsSortedInReversedAplhabeticalOrderWhenIterating) {
 
     struct Comparator {
@@ -99,7 +99,7 @@ TEST(SetString, ElementsSortedInReversedAplhabeticalOrderWhenIterating) {
 }
 
 
-
+/*
 TEST(SetInt, InvalidComparatorThatCausesOnlyOneElementToBeInserted) {
 
     struct Comparator {
