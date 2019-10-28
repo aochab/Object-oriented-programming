@@ -1,5 +1,6 @@
 #include "TestIncludes.h"
 #include <set>
+#include <map>
 
 
 TEST(SetInt, RemoveElements) {
@@ -215,7 +216,10 @@ TEST(SetInt, ElementsGreaterThanGivenValue) {
 
 TEST(MapStringString, CreateUsingInitializerList) {
 
-    // TODO: ....
+    std::map<std::string,std::string> map;
+    map.insert({"CN","China"});
+    map.insert({"GR","Greece"});
+    map.insert({"FR","France"});
 
     ASSERT_EQ(3u, map.size());
     EXPECT_EQ("China", map["CN"]);
