@@ -73,11 +73,12 @@ TEST(SetDouble, ElementsSortedWhenIterating) {
 TEST(SetString, ElementsSortedInReversedAplhabeticalOrderWhenIterating) {
 
     struct Comparator {
-        // TODO: ....
+        bool operator()(const std::string& lhs, const std::string& rhs) const{
+            if(lhs > rhs) return true;
+            return false;
+        }
     };
-
-
-    // TODO: ....
+    std::set<std::string,Comparator> set{"Aa","Ba","Ab","Bb"};
 
     auto iter = set.begin();
     EXPECT_EQ("Bb", *iter++);
@@ -86,7 +87,7 @@ TEST(SetString, ElementsSortedInReversedAplhabeticalOrderWhenIterating) {
     EXPECT_EQ("Aa", *iter++);
     EXPECT_EQ(set.end(), iter);
 
-    // TODO: ....
+    set.insert("Ca");
 
     iter = set.begin();
     EXPECT_EQ("Ca", *iter++);
