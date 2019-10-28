@@ -1,24 +1,23 @@
 #include "TestIncludes.h"
-
-// TODO: ....
+#include <set>
 
 TEST(SetInt, RemoveElements) {
 
-    // TODO: ....
+    std::set <int> set{1,2,3};
 
     ASSERT_EQ(3u, set.size());
     EXPECT_EQ(1u, set.count(1));
     EXPECT_EQ(1u, set.count(2));
     EXPECT_EQ(1u, set.count(3));
 
-    // TODO: ....
+    set.erase(2);
 
     ASSERT_EQ(2u, set.size());
     EXPECT_EQ(1u, set.count(1));
     EXPECT_EQ(0u, set.count(2));
     EXPECT_EQ(1u, set.count(3));
 }
-
+/*
 TEST(SetDouble, ElementsSortedWhenIterating) {
 
     // TODO: ....
@@ -55,6 +54,14 @@ TEST(SetString, ElementsSortedInReversedAplhabeticalOrderWhenIterating) {
         // TODO: ....
     };
 
+    struct Foo{};
+    //a<b
+struct FooComparator{
+ bool operator()(const Foo& lhs, const Foo& rhs) const
+ {
+ return false
+ }
+ }
     // TODO: ....
 
     auto iter = set.begin();
@@ -75,6 +82,27 @@ TEST(SetString, ElementsSortedInReversedAplhabeticalOrderWhenIterating) {
     EXPECT_EQ(set.end(), iter);
 
 }
+
+ //do hasha comparator
+
+ struct FooHash
+ {
+ std::size_t operator()(const Foo& foo) const noexcept
+ {
+ return 0; //tutaj ta funkcja myslimy
+ }
+
+
+ //a==b
+ structr FooEqual
+ {
+    bool operator()(const Foo& lhs, const Foo& rhs) const
+    {
+    return fa;se;
+    }
+ }
+
+ sd::unsorted_set<Foo, FooHash, FooEqual> unsorted_set{}
 
 TEST(SetInt, InvalidComparatorThatCausesOnlyOneElementToBeInserted) {
 
@@ -309,3 +337,4 @@ TEST(UnorderedSetInt, BucketsAndLoadFactor) {
     EXPECT_EQ(11u, unordered_set.bucket_count());
     EXPECT_FLOAT_EQ(11.0 / 11.0, unordered_set.load_factor());
 }
+*/
