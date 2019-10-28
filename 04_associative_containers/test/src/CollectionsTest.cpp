@@ -1,6 +1,7 @@
 #include "TestIncludes.h"
 #include <set>
 
+
 TEST(SetInt, RemoveElements) {
 
     std::set <int> set{1,2,3};
@@ -18,26 +19,47 @@ TEST(SetInt, RemoveElements) {
     EXPECT_EQ(1u, set.count(3));
 }
 /*
+struct Foo{};
+
+struct FooComparator{ //a<b
+    bool operator()(const Foo& lhs, const Foo& rhs) const{return false;}
+};
+
+std::set<Foo,FooComparator> set{};
+//do has comparator
+
+struct FooHash {
+    std::size_t operator()(const Foo &foo) const noexcept { return 0; }
+};
+
+    //a==b
+    struct FooEqual {
+        bool operator()(const Foo& lhs, const Foo& rhs) const {return false;}
+    };
+
+    std::unordered_set<Foo, FooHash, FooEqual> unsorted_set{};
+*/
+
 TEST(SetDouble, ElementsSortedWhenIterating) {
 
-    // TODO: ....
+    std::set <double> set{};
 
     ASSERT_TRUE(set.empty());
 
-    // TODO: ....
+   set.insert({2.2, 3.3});
 
     ASSERT_EQ(2u, set.size());
     EXPECT_EQ(1u, set.count(3.3));
     EXPECT_EQ(1u, set.count(2.2));
 
-    // TODO: ....
+    set.insert({1.1, 4.4});
     ASSERT_EQ(4u, set.size());
     EXPECT_EQ(1u, set.count(3.3));
     EXPECT_EQ(1u, set.count(2.2));
     EXPECT_EQ(1u, set.count(4.4));
     EXPECT_EQ(1u, set.count(1.1));
 
-    // TODO: ....
+    set.insert(0.0);
 
     auto iter = set.begin();
     EXPECT_EQ(0.0, *iter++);
@@ -47,21 +69,14 @@ TEST(SetDouble, ElementsSortedWhenIterating) {
     EXPECT_EQ(4.4, *iter++);
     EXPECT_EQ(set.end(), iter);
 }
-
+/*
 TEST(SetString, ElementsSortedInReversedAplhabeticalOrderWhenIterating) {
 
     struct Comparator {
         // TODO: ....
     };
 
-    struct Foo{};
-    //a<b
-struct FooComparator{
- bool operator()(const Foo& lhs, const Foo& rhs) const
- {
- return false
- }
- }
+
     // TODO: ....
 
     auto iter = set.begin();
@@ -83,26 +98,7 @@ struct FooComparator{
 
 }
 
- //do hasha comparator
 
- struct FooHash
- {
- std::size_t operator()(const Foo& foo) const noexcept
- {
- return 0; //tutaj ta funkcja myslimy
- }
-
-
- //a==b
- structr FooEqual
- {
-    bool operator()(const Foo& lhs, const Foo& rhs) const
-    {
-    return fa;se;
-    }
- }
-
- sd::unsorted_set<Foo, FooHash, FooEqual> unsorted_set{}
 
 TEST(SetInt, InvalidComparatorThatCausesOnlyOneElementToBeInserted) {
 
