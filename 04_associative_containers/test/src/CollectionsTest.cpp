@@ -195,7 +195,7 @@ TEST(SetValue, CustomTypeAndComparator) {
 
 TEST(SetInt, ElementsGreaterThanGivenValue) {
 
-    // TODO: ....
+    std::set<int> set{1,2,3,4,5};
 
     ASSERT_EQ(5u, set.size());
     EXPECT_EQ(1u, set.count(1));
@@ -204,7 +204,8 @@ TEST(SetInt, ElementsGreaterThanGivenValue) {
     EXPECT_EQ(1u, set.count(4));
     EXPECT_EQ(1u, set.count(5));
 
-    // TODO: ....
+    auto iter = set.find(2);
+    *iter++;
 
     EXPECT_EQ(3, *iter++);
     EXPECT_EQ(4, *iter++);
