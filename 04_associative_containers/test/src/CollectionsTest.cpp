@@ -74,7 +74,7 @@ TEST(SetString, ElementsSortedInReversedAplhabeticalOrderWhenIterating) {
 
     struct Comparator {
         bool operator()(const std::string& lhs, const std::string& rhs) const{
-            if(lhs > rhs) return true;
+            if(!(lhs < rhs)) return true;
             return false;
         }
     };
@@ -147,36 +147,44 @@ TEST(SetInt, InvalidComparatorThatCausesMultipleCopiesOfTheSameElementToBeInsert
 TEST(SetValue, CustomTypeAndComparator) {
 
     struct Value {
-        // TODO: ....
+        int x;
+        int y;
     };
 
     struct Comparator {
-        // TODO: ....
+        bool operator()(const Value &lhs, const Value &rhs) const {
+            if (!(lhs.x < rhs.x))
+            {
+                   if(lhs.y < rhs.y) return true;
+                   return false;
+            }
+            return true;
+        }
     };
 
-    // TODO: ....
+    std::set<Value, Comparator> set{};
 
     ASSERT_TRUE(set.empty());
 
-    // TODO: ....
+    set.insert(Value{3, 0});
 
     ASSERT_EQ(1u, set.size());
     EXPECT_EQ(1u, set.count(Value{3, 0}));
 
-    // TODO: ....
+    set.insert(Value{6, 0});
 
     ASSERT_EQ(2u, set.size());
     EXPECT_EQ(1u, set.count(Value{3, 0}));
     EXPECT_EQ(1u, set.count(Value{6, 0}));
 
-    // TODO: ....
+    set.insert(Value{3, 3});
 
     ASSERT_EQ(3u, set.size());
     EXPECT_EQ(1u, set.count(Value{3, 0}));
     EXPECT_EQ(1u, set.count(Value{6, 0}));
     EXPECT_EQ(1u, set.count(Value{3, 3}));
 
-    // TODO: ....
+    set.insert(Value{6, 6});
 
     ASSERT_EQ(4u, set.size());
     EXPECT_EQ(1u, set.count(Value{3, 0}));
