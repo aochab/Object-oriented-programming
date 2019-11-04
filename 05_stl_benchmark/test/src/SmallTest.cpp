@@ -111,5 +111,44 @@ TEST(SmallTest, Clear) {
     }
 }
 
+TEST(SmallTest, LessThenOperator1) {
 
-// TODO: Add tests for your operators implementation!
+    Small small1{'a'};
+    Small small2{'b'};
+    EXPECT_EQ(true,small1<small2);
+}
+
+TEST(SmallTest, LessThenOperator2) {
+
+    Small small1{'c'};
+    Small small2{'b'};
+    EXPECT_EQ(false,small1<small2);
+}
+
+TEST(SmallTest, EqualityOperator1) {
+
+    Small small1{'a'};
+    Small small2{'a'};
+    EXPECT_EQ(true,small1==small2);
+}
+
+TEST(SmallTest, EqualityOperator2) {
+
+    Small small1{'a'};
+    Small small2{'b'};
+    EXPECT_EQ(false,small1==small2);
+}
+
+TEST(SmallTest, HashFuncion) {
+
+    Small small{'v'};
+    auto small_hash = std::hash<Small>{}(small);
+    EXPECT_EQ('v',small_hash);
+}
+
+TEST(SmallTest, HashFuncion2) {
+
+    Small small{'v'};
+    auto small_hash = std::hash<Small>{}(small);
+    EXPECT_NE('a',small_hash);
+}

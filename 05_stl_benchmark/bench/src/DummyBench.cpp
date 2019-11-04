@@ -3,11 +3,11 @@
 
 static void Dummy_Integrate(State& state) {
 
-    Dummy dummy{};
+    Dummy dummy{}; //tu dajemy daną kolekcje
 
     for (auto _ : state) {
 
-        auto integral = dummy.integrate(0, state.range(0));
+        auto integral = dummy.integrate(0, state.range(0));  //ii tuu bedziemy cos liczyc i benchamrk to sobie policzy ile zeszlo itd
 
         DoNotOptimize(integral);
     }
@@ -16,3 +16,5 @@ static void Dummy_Integrate(State& state) {
 }
 
 BENCHMARK(Dummy_Integrate)->RangeMultiplier(2)->Range(1<<5, 1<<18)->Complexity();
+//to jest zakres w jamim ten benchamrkj sie odpala, czyli zyaczyna od 2 i leci jak potega
+//
