@@ -24,7 +24,7 @@ struct Large {
 
     bool operator<(const Large &rhs) const {
 
-        // TODO: Implement me!
+        // TODO: Implement me! ma prowynywac te elementy odpowiadjace. moze count?? jest taka funkcja sdprawdzajaca cala tablice
         return false;
     }
 
