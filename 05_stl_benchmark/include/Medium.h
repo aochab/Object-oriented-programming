@@ -42,7 +42,19 @@ struct Medium {
 
     bool operator==(const Medium &rhs) const {
 
-        // TODO: Implement me!
+        int copyData[SIZE];
+        std::copy(std::begin(this->data),std::end(this->data),std::begin(copyData));
+        int copyRhs[SIZE];
+        std::copy(std::begin(rhs.data),std::end(rhs.data),std::begin(copyRhs));
+
+        std::sort(copyData,copyData+SIZE);
+        std::sort(copyRhs,copyRhs+SIZE);
+
+        for(int i=0; i<SIZE; i++){
+            if(copyData[i] != copyRhs[i])
+                return false;
+        }
+
         return true;
     }
 };
