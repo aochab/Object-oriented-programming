@@ -113,9 +113,22 @@ TEST(MediumTest, LessThenOperator1) {
     for(int i=0;i<256;i++)
     {
         medium1.data[i]=i;
-        medium2.data[i]=i+1;
+        medium2.data[i]=i+3;
     }
     EXPECT_EQ(true,medium1<medium2);
+}
+
+TEST(MediumTest, LessThenOperator2) {
+
+    Medium medium1{};
+    Medium medium2{};
+
+    for(int i=0;i<256;i++)
+    {
+        medium1.data[i]=i;
+        medium2.data[i]=i-3;
+    }
+    EXPECT_EQ(false,medium1<medium2);
 }
 
 // TODO: Add tests for your operators implementation!
