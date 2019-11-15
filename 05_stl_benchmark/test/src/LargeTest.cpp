@@ -159,4 +159,30 @@ TEST(LargeTest, EqualityOperator2) {
     }
     EXPECT_EQ(false,large1==large2);
 }
-// TODO: Add tests for your operators implementation!
+TEST(LargeTest, HashFuncion) {
+
+    Large large{};
+    long value=0;
+    for(int i=0; i < large.SIZE; i++)
+    {
+        large.data[i]=i;
+        value += i;
+    }
+    value %= large.SIZE;
+    auto large_hash = std::hash<Large> {}(large);
+    EXPECT_EQ(value, large_hash);
+}
+
+TEST(LargeTest, HashFuncion2) {
+
+    Large large{};
+    long value=0;
+    for(int i=0; i < large.SIZE; i++)
+    {
+        large.data[i]=i;
+        value += i;
+    }
+    value %= large.SIZE + 1;
+    auto large_hash = std::hash<Large>{}(large);
+    EXPECT_NE(value,large_hash);
+}

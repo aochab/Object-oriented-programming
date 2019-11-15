@@ -110,7 +110,7 @@ TEST(MediumTest, LessThenOperator1) {
     Medium medium1{};
     Medium medium2{};
 
-    for(int i=0;i<256;i++)
+    for(int i=0;i<medium1.SIZE;i++)
     {
         medium1.data[i]=i;
         medium2.data[i]=i+3;
@@ -123,7 +123,7 @@ TEST(MediumTest, LessThenOperator2) {
     Medium medium1{};
     Medium medium2{};
 
-    for(int i=0;i<256;i++)
+    for(int i=0;i<medium1.SIZE;i++)
     {
         medium1.data[i]=i;
         medium2.data[i]=i-3;
@@ -136,7 +136,7 @@ TEST(MediumTest, EqualityOperator1) {
     Medium medium1{};
     Medium medium2{};
 
-    for(int i=0;i<256;i++)
+    for(int i=0;i<medium1.SIZE;i++)
     {
         medium1.data[i]=i;
         medium2.data[i]=i;
@@ -149,7 +149,7 @@ TEST(MediumTest, EqualityOperator2) {
     Medium medium1{};
     Medium medium2{};
 
-    for(int i=0;i<256;i++)
+    for(int i=0;i<medium1.SIZE;i++)
     {
         medium1.data[i]=i;
         medium2.data[i]=i-3;
@@ -157,4 +157,30 @@ TEST(MediumTest, EqualityOperator2) {
     EXPECT_EQ(false,medium1==medium2);
 }
 
-// TODO: Add tests for your operators implementation!
+TEST(MediumTest, HashFuncion) {
+
+    Medium medium{};
+    long value=0;
+    for(int i=0;i<medium.SIZE;i++)
+    {
+        medium.data[i]=i;
+        value += i;
+    }
+    value %= medium.SIZE;
+    auto medium_hash = std::hash<Medium>{}(medium);
+    EXPECT_EQ(value,medium_hash);
+}
+
+TEST(MediumTest, HashFuncion2) {
+
+    Medium medium{};
+    long value=0;
+    for(int i=0;i<medium.SIZE;i++)
+    {
+        medium.data[i]=i;
+        value += i;
+    }
+    value %= medium.SIZE+1;
+    auto medium_hash = std::hash<Medium>{}(medium);
+    EXPECT_NE(value,medium_hash);
+}

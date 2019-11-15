@@ -143,7 +143,7 @@ TEST(SmallTest, HashFuncion) {
 
     Small small{'v'};
     auto small_hash = std::hash<Small>{}(small);
-    EXPECT_EQ('v',small_hash);
+    EXPECT_EQ('v'+1,small_hash);
 }
 
 TEST(SmallTest, HashFuncion2) {

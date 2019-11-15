@@ -43,8 +43,13 @@ namespace std {
     struct hash<Large> {
         std::size_t operator()(const Large &d) const {
 
-            // TODO: Implement me!
-            return 0;
+            long hashValue=0;
+            for(int i=0;i<d.SIZE;i++)
+            {
+                hashValue += d.data[i];
+            }
+            return hashValue%d.SIZE;
+
         }
     };
 }
