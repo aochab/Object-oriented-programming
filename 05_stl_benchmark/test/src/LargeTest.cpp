@@ -108,5 +108,55 @@ TEST(LargeTest, Clear) {
     }
 }
 
+TEST(LargeTest, LessThenOperator1) {
 
+    Large large1{};
+    Large large2{};
+
+    for(int i=0;i<128u*1024u;i++)
+    {
+        large1.data[i]=i;
+        large2.data[i]=i+3;
+    }
+    EXPECT_EQ(true,large1<large2);
+}
+
+TEST(LargeTest, LessThenOperator2) {
+
+    Large large1{};
+    Large large2{};
+
+    for(int i=0;i<128u*1024u;i++)
+    {
+        large1.data[i]=i;
+        large2.data[i]=i-3;
+    }
+    EXPECT_EQ(false,large1<large2);
+}
+
+TEST(LargeTest, EqualityOperator1) {
+
+    Large large1{};
+    Large large2{};
+
+    for(int i=0;i<128u*1024u;i++)
+    {
+        large1.data[i]=i;
+        large2.data[i]=i;
+    }
+    EXPECT_EQ(true,large1==large2);
+}
+
+TEST(LargeTest, EqualityOperator2) {
+
+    Large large1{};
+    Large large2{};
+
+    for(int i=0;i<128u*1024u;i++)
+    {
+        large1.data[i]=i;
+        large2.data[i]=i-3;
+    }
+    EXPECT_EQ(false,large1==large2);
+}
 // TODO: Add tests for your operators implementation!

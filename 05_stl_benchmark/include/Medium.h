@@ -24,7 +24,7 @@ struct Medium {
 
     bool operator<(const Medium &rhs) const {
 
-        int copyData[SIZE];
+       /* int copyData[SIZE];
         std::copy(std::begin(this->data),std::end(this->data),std::begin(copyData));
         int copyRhs[SIZE];
         std::copy(std::begin(rhs.data),std::end(rhs.data),std::begin(copyRhs));
@@ -36,12 +36,15 @@ struct Medium {
             if(copyData[i] >= copyRhs[i])
                 return false;
         }
+        */
+       if(std::lexicographical_compare(this->data,this->data+SIZE,rhs.data,rhs.data+SIZE))
+           return true;
 
-        return true;
+        return false;
     }
 
     bool operator==(const Medium &rhs) const {
-
+/*
         int copyData[SIZE];
         std::copy(std::begin(this->data),std::end(this->data),std::begin(copyData));
         int copyRhs[SIZE];
@@ -54,8 +57,10 @@ struct Medium {
             if(copyData[i] != copyRhs[i])
                 return false;
         }
-
-        return true;
+*/
+        if(std::equal(this->data,this->data+SIZE,rhs.data))
+            return true;
+        return false;
     }
 };
 
