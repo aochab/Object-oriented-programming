@@ -24,13 +24,16 @@ struct Large {
 
     bool operator<(const Large &rhs) const {
 
-        // TODO: Implement me! ma prowynywac te elementy odpowiadjace. moze count?? jest taka funkcja sdprawdzajaca cala tablice
+        if(std::lexicographical_compare(this->data,this->data+SIZE,rhs.data,rhs.data+SIZE))
+            return true;
+
         return false;
     }
 
     bool operator==(const Large &rhs) const {
 
-        // TODO: Implement me!
+        if(std::equal(this->data,this->data+SIZE,rhs.data))
+            return true;
         return false;
     }
 };
