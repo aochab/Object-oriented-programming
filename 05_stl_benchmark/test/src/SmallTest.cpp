@@ -139,14 +139,14 @@ TEST(SmallTest, EqualityOperator2) {
     EXPECT_EQ(false,small1==small2);
 }
 
-TEST(SmallTest, HashFuncion) {
+TEST(SmallTest, HashFunction) {
 
     Small small{'v'};
     auto small_hash = std::hash<Small>{}(small);
     EXPECT_EQ('v'+1,small_hash);
 }
 
-TEST(SmallTest, HashFuncion2) {
+TEST(SmallTest, HashFunction2) {
 
     Small small{'v'};
     auto small_hash = std::hash<Small>{}(small);

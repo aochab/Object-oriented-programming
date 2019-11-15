@@ -159,7 +159,7 @@ TEST(LargeTest, EqualityOperator2) {
     }
     EXPECT_EQ(false,large1==large2);
 }
-TEST(LargeTest, HashFuncion) {
+TEST(LargeTest, HashFunction) {
 
     Large large{};
     long value=0;
@@ -173,7 +173,7 @@ TEST(LargeTest, HashFuncion) {
     EXPECT_EQ(value, large_hash);
 }
 
-TEST(LargeTest, HashFuncion2) {
+TEST(LargeTest, HashFunction2) {
 
     Large large{};
     long value=0;

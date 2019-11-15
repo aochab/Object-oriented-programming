@@ -157,7 +157,7 @@ TEST(MediumTest, EqualityOperator2) {
     EXPECT_EQ(false,medium1==medium2);
 }
 
-TEST(MediumTest, HashFuncion) {
+TEST(MediumTest, HashFunction) {
 
     Medium medium{};
     long value=0;
@@ -171,7 +171,7 @@ TEST(MediumTest, HashFuncion) {
     EXPECT_EQ(value,medium_hash);
 }
 
-TEST(MediumTest, HashFuncion2) {
+TEST(MediumTest, HashFunction2) {
 
     Medium medium{};
     long value=0;
