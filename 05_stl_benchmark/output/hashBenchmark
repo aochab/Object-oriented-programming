@@ -1,0 +1,61 @@
+2019-11-17 13:34:07
+Running ./05_stl_benchmark_bench
+Run on (4 X 2494.24 MHz CPU s)
+CPU Caches:
+  L1 Data 32K (x4)
+  L1 Instruction 32K (x4)
+  L2 Unified 256K (x4)
+  L3 Unified 3072K (x4)
+Load Average: 0.28, 0.47, 0.65
+***WARNING*** Library was built as DEBUG. Timings may be affected.
+----------------------------------------------------------------
+Benchmark                      Time             CPU   Iterations
+----------------------------------------------------------------
+hashTimeSmall/32            25.6 ns         25.6 ns     25860646
+hashTimeSmall/64            25.5 ns         25.4 ns     23175363
+hashTimeSmall/128           25.7 ns         25.6 ns     27765348
+hashTimeSmall/256           25.6 ns         25.6 ns     27298658
+hashTimeSmall/512           25.1 ns         25.0 ns     27655723
+hashTimeSmall/1024          25.4 ns         25.4 ns     27863155
+hashTimeSmall/2048          25.5 ns         25.5 ns     27281372
+hashTimeSmall/4096          25.1 ns         25.1 ns     27813479
+hashTimeSmall/8192          25.6 ns         25.5 ns     27881720
+hashTimeSmall/16384         25.2 ns         25.2 ns     27255856
+hashTimeSmall/32768         25.2 ns         25.2 ns     28044566
+hashTimeSmall/65536         25.2 ns         25.2 ns     27723806
+hashTimeSmall/131072        26.0 ns         26.0 ns     27746216
+hashTimeSmall/262144        26.8 ns         26.7 ns     27851786
+hashTimeSmall_BigO         25.54 (1)       25.50 (1)  
+hashTimeSmall_RMS              2 %             2 %    
+hashTimeMedium/32           1364 ns         1363 ns       509885
+hashTimeMedium/64           1366 ns         1365 ns       511884
+hashTimeMedium/128          1364 ns         1362 ns       510955
+hashTimeMedium/256          1367 ns         1365 ns       512593
+hashTimeMedium/512          1360 ns         1357 ns       515291
+hashTimeMedium/1024         1368 ns         1366 ns       510989
+hashTimeMedium/2048         1368 ns         1367 ns       506447
+hashTimeMedium/4096         1362 ns         1362 ns       508937
+hashTimeMedium/8192         1360 ns         1360 ns       511686
+hashTimeMedium/16384        1360 ns         1359 ns       511970
+hashTimeMedium/32768        1360 ns         1360 ns       515633
+hashTimeMedium/65536        1379 ns         1379 ns       504873
+hashTimeMedium/131072       1396 ns         1396 ns       512384
+hashTimeMedium/262144       1407 ns         1407 ns       514840
+hashTimeMedium_BigO      1370.11 (1)     1369.20 (1)  
+hashTimeMedium_RMS             1 %             1 %    
+hashTimeLarge/32          736993 ns       736963 ns          962
+hashTimeLarge/64          738567 ns       738469 ns          963
+hashTimeLarge/128         743446 ns       743396 ns          957
+hashTimeLarge/256         733653 ns       733634 ns          962
+hashTimeLarge/512         730287 ns       730240 ns          966
+hashTimeLarge/1024        750053 ns       750063 ns          967
+hashTimeLarge/2048        729611 ns       729520 ns          820
+hashTimeLarge/4096        823609 ns       823525 ns          969
+hashTimeLarge/8192        727542 ns       727506 ns          966
+hashTimeLarge/16384       728284 ns       728251 ns          969
+hashTimeLarge/32768       731766 ns       731661 ns          958
+hashTimeLarge/65536       727947 ns       727927 ns          959
+hashTimeLarge/131072      726337 ns       726313 ns          960
+hashTimeLarge/262144      727479 ns       727024 ns          967
+hashTimeLarge_BigO     739683.97 (1)   739606.54 (1)  
+hashTimeLarge_RMS              3 %             3 %    

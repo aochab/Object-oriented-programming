@@ -180,7 +180,7 @@ TEST(MediumTest, HashFunction2) {
         medium.data[i]=i;
         value += i;
     }
-    value %= medium.SIZE+1;
+    value %= medium.SIZE+2;
     auto medium_hash = std::hash<Medium>{}(medium);
     EXPECT_NE(value,medium_hash);
 }

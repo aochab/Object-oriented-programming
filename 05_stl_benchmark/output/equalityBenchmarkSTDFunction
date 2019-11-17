@@ -1,0 +1,61 @@
+2019-11-15 16:03:52
+Running ./05_stl_benchmark_bench
+Run on (4 X 2494.24 MHz CPU s)
+CPU Caches:
+  L1 Data 32K (x4)
+  L1 Instruction 32K (x4)
+  L2 Unified 256K (x4)
+  L3 Unified 3072K (x4)
+Load Average: 0.35, 0.36, 0.33
+***WARNING*** Library was built as DEBUG. Timings may be affected.
+--------------------------------------------------------------------
+Benchmark                          Time             CPU   Iterations
+--------------------------------------------------------------------
+equalityTimeSmall/32            25.0 ns         25.0 ns     27527626
+equalityTimeSmall/64            25.2 ns         25.2 ns     27355750
+equalityTimeSmall/128           25.3 ns         25.3 ns     27385913
+equalityTimeSmall/256           25.3 ns         25.2 ns     27573375
+equalityTimeSmall/512           25.5 ns         25.5 ns     27628903
+equalityTimeSmall/1024          25.3 ns         25.2 ns     27306139
+equalityTimeSmall/2048          25.7 ns         25.7 ns     27608252
+equalityTimeSmall/4096          25.6 ns         25.5 ns     27521908
+equalityTimeSmall/8192          25.4 ns         25.4 ns     27192613
+equalityTimeSmall/16384         25.3 ns         25.3 ns     27426350
+equalityTimeSmall/32768         25.2 ns         25.2 ns     27601623
+equalityTimeSmall/65536         25.3 ns         25.3 ns     27522527
+equalityTimeSmall/131072        25.5 ns         25.4 ns     27739527
+equalityTimeSmall/262144        25.5 ns         25.5 ns     27638412
+equalityTimeSmall_BigO         25.35 (1)       25.34 (1)  
+equalityTimeSmall_RMS              1 %             1 %    
+equalityTimeMedium/32            117 ns          117 ns      5918773
+equalityTimeMedium/64            118 ns          118 ns      5859988
+equalityTimeMedium/128           117 ns          117 ns      5944053
+equalityTimeMedium/256           117 ns          117 ns      5875444
+equalityTimeMedium/512           117 ns          117 ns      5883383
+equalityTimeMedium/1024          117 ns          117 ns      5923644
+equalityTimeMedium/2048          117 ns          117 ns      5911263
+equalityTimeMedium/4096          117 ns          117 ns      5954377
+equalityTimeMedium/8192          118 ns          118 ns      5927105
+equalityTimeMedium/16384         117 ns          117 ns      5901734
+equalityTimeMedium/32768         117 ns          117 ns      5926448
+equalityTimeMedium/65536         117 ns          117 ns      5968207
+equalityTimeMedium/131072        117 ns          117 ns      5958603
+equalityTimeMedium/262144        117 ns          117 ns      5942040
+equalityTimeMedium_BigO       117.23 (1)      117.21 (1)  
+equalityTimeMedium_RMS             0 %             0 %    
+equalityTimeLarge/32            94.6 ns         94.5 ns      7437937
+equalityTimeLarge/64            96.0 ns         95.9 ns      7429462
+equalityTimeLarge/128           94.1 ns         94.1 ns      7463193
+equalityTimeLarge/256           94.1 ns         94.1 ns      7419822
+equalityTimeLarge/512           94.4 ns         94.4 ns      7325419
+equalityTimeLarge/1024          94.1 ns         94.1 ns      7005653
+equalityTimeLarge/2048          94.0 ns         94.0 ns      7407258
+equalityTimeLarge/4096           111 ns          111 ns      7459211
+equalityTimeLarge/8192          95.2 ns         95.2 ns      7424388
+equalityTimeLarge/16384         95.8 ns         95.8 ns      7403921
+equalityTimeLarge/32768         95.7 ns         95.7 ns      7470831
+equalityTimeLarge/65536          107 ns          107 ns      7481402
+equalityTimeLarge/131072        95.1 ns         95.1 ns      7354864
+equalityTimeLarge/262144        96.3 ns         96.2 ns      7382640
+equalityTimeLarge_BigO         96.95 (1)       96.93 (1)  
+equalityTimeLarge_RMS              5 %             5 %    

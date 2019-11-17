@@ -1,219 +1,68 @@
 # 05 STL BENCHMARKS
 
-This is a starter project that should be used to realize the STL performance analysis assignment.
+_Used hardware:_
+* _Intel Core i5-4200M: 4 X 2494.24 MHz CPU s_
+* _8 GB DDR3 RAM_
+* _HDD_
 
-Below steps should guide you gently through whole project. 
+## Report
 
-Make sure that you understand given point before stepping to next one.
-
-1. Implement missing operators and hash functions
-
-    There are three types [Small](include/Small.h) (size 1B), [Medium](include/Medium.h) (size 1KB) and [Large](include/Large.h) (size 1MB). 
-
-    All three types have some boilerplate code added but implementations of less-than operator, equality operator and hash function are missing.
+1. Missing operators and hash function
+    1. Less-then operator compares every element of our tables,checking which element is smaller 
+    in lexicographical order. In N-dimensional data such as our table, it should compare 
+    corresponding elements of the tables until it meets the smaller element in first table.
+    I use For loop, comparing individual elements. This way is faster than use function 
+    std::lexicographical_compare. You can see it by comparing the benchmark results: 
+    [For loop method](output/comparisonBenchmark) and 
+    [std::lexicographical_compare](output/comparisonBenchmarkSTDFunction).
     
-    Your task is to add missing code.
-
-    Report content hints:
-
-    1. How to define correct less-than operator? What should it do for N-dimensional data such as our table?
-    2. What is the optimal implementation for equality operator for continuous block of data?
-    3. What is the purpose of hash function? What are its mathematical properties?
-    4. Describe/justify your implementation.
-
-2. Add unit test for operators and hash functions
-
-    Tests should be added at the end of [SmallTest](test/src/SmallTest.cpp), [MediumTest](test/src/MediumTest.cpp) and [LargeTest](test/src/LargeTest.cpp). Existing test code should not be modified.
-
-    Report content hints:
+    2. In equality operator i use the same For loop method until two corresponding elements are not equal.
+    std::equal function is slower. Check results: [For loop method](output/equalityBenchmark) and
+    [std::equal](output/equalityBenchmarkSTDFunction).
     
-    1. How did you test correctness of operator <, == and hash function?
-    2. Should we initialize tested objects (Small/Medium/Large) with random data? Or should we initialize them manually with known data?   
+    3. A hash function is used to map data and give a special value which will identify that data.
+    It is deterministic, universal, efficient.
     
-3. Create benchmarks for operators and hash functions
+    4. I sum individual elements of the table and do module operation on that value.
+    Thanks to this we get a relatively unique number, describing our data.
 
-    Add your benchmarks inside [SmallBench](bench/src/SmallBench.cpp), 
-    [MediumBench](bench/src/MediumBench.cpp) and [LargeBench](bench/src/LargeBench.cpp). 
+2. Unit test for operators and hash functions
     
-    Those benchmark should measure how long it takes to perform single operation (e.g.: comparison _a < b_).
-    This result will be very important in later steps while interpreting STL benchmarks results.
-
-    Report content hints:
+    1. I prepare special tests to validate my implementation of operators and hash function. 
+    I initialize objects manually with known data sand then check return value.
     
-    1. Describe benchmark structure for simple call tests.
-    2. Are there any consequences for sequential containers when our implementation is slow?
-    3. What is the impact of slow operator less-than implementation on sorted associative containers? 
-    4. What is the impact of slow equality operator / hash function on unordered associative containers?
-    5. Describe your benchmark results.
-    6. Should we initialize objects (Small/Medium/Large) with random data? Why? Why not?
+    2. I think we should initialize tested objects manually with known data, because we can predict final result
+    of the test. But we should check several cases to make sure, that code works properly.
     
-4. Create benchmarks for assigned containers/methods using [Small](include/Small.h) type and _Debug_ build
+3. Benchmarks for operators and hash functions
 
-    There will be three randomly assigned STL containers. 
-    Each container has a list of methods that needs to be evaluated (list below).
+    1. Create void function and initialize objects to test. Inside for loop is code we want to test 
+    and we use DoNotOptimize to store result in memory or register. We make test executable by adding 
+    an expression BENCHMARK(<test_name>)->Range... In this benchmarks we test complexity. As a result 
+    we get the coefficient for the high-order term in the running time and the normalized root-mean square
+    error.
     
-    First step is to implement and run benchmarks in Debug mode. 
-    This corresponds to _-O0_ flag set in compiler arguments list. 
-    By doing this will simplify our task - there will be no cede mysteriously deleted by optimizer.
-
-    Report content hints:
+    2. Yes, there are consequences. It use implemented functions to sort the data. So, when our implementation
+    is slow, all operations in sequential containers are slower.
     
-    1. Describe structure of benchmark that measures computational complexity (Big O)
-    2. Plot benchmarks results on graphs with your complexity result
-       
-        X axis - initial number of elements in collection (N)
-       
-        Y axis - given operation time
-       
-    3. Did you get the same complexity as e.g. on [cppreference.com](http://en.cppreference.com/w/cpp/container). If not why are they different?
-    4. How can we write benchmarks for methods that e.g.: add or remove elements from collection? Describe Pause/Resume timing method. 
-       Describe baseline method. How did you implement those benchmarks?
-       
-5. Use appropriate escape functions to prevent optimization and run benchmarks in _Release_ build
+    3. Going through the container and finding the element then, takes more time.
     
-    In this step you should rerun benchmarks in Release mode (_-O2_ or _-O3_ flag) after applying optimizer escape functions.
-    You can use _DoNotOptimze(...)_ and _ClobberMemory()_ helpers provided by framework.
+    4. Unordered associative containers are not sorted, but organized into buckets. Which bucket an element 
+    is placed depends on the hash of its value. When our implementation is slow, it have slower access
+    to individual elements. The same situation applies to equality operator, because to find individual
+    element in container it search an exact bucket the element was placed into. Every operation should be done
+    as soon as possible. 
 
-    Report content hints:
+    5. It's faster to use own implemented function for loop, than stl::lexicographical_compare and 
+    stl::equal. You can see a difference in output Benchmark files e.g. [comparison](output/comparisonBenchmark),
+    [equality](output/equalityBenchmark) and [comparisonSTD](output/comparisonBenchmarkSTDFunction), 
+    [equality](output/equalityBenchmarkSTDFunction). Using the STL function we have 1% RMS, but the average
+    execution of comparison time and execution of equality operation time is much bigger than in my implementation.
     
-    1. Why does the compiler optimizer break our benchmark code?
-    2. What do the _DoNotOptimze(...)_ and _ClobberMemory()_ helpers do?
-    3. Plot benchmarks results for both Debug and Release mode? Did you see any changes in times/complexity?
+        As the amount of data increases, the time it takes to complete the operation increases too. You can see this
+    difference mainly in hash function. For less-than and equality operation i initialize objects with random
+    data, so the probability of occurrence of different elements in compared tables is similar. For this reason,
+    times do not differ so significantly in Medium and Large.
     
-6. Repeat steps 5 and 6 for [Medium](include/Medium.h) and [Large](include/Large.h) types
-
-    This step should be quite straightforward because all benchmark code should be already created.
-    We should only change the type and benchmark range (otherwise we might run out of memory). 
-
-    Report content hints:
-    
-    1. Plot benchmarks results for all types Small/Medium/Large and Debug/Release mode on single graph (if possible, 6 lines).
-       Did you see any changes in times/complexity?
-    2. What is the impact of of bigger size on performance? Can it be explained by operators implementation overhead?  
-    
-7. Collect results and create a report
-
-    Raw output from tests and benchmarks should be stored into [output](output/) directory.
-
-    Report should be created as [readme](readme.md) file in [Markdown](https://en.wikipedia.org/wiki/Markdown) format.
-    It should be placed alongside your project inside code repository. Other documents such as PDF/Word won't be accepted!
-        
-    Report should follow points 1 to 6 and describe in detail reasons behind selected implementation and obtained results (see each point for some hints).
-    You should also describe hardware used to execute benchmarks and add some conclusions at the end.
-    
-8. Grading and deadline
-
-    There are four points to get (added to activity points).
-    
-    You have two weeks to submit all changes to your repository.
-
-
-# Container method list
-
-std::vector
-```
-    at, operator[], front, back, data,
-    empty, size, max_size, reserve, capacity, shrink_to_fit, 
-    clear, insert, erase, push_back, pop_back, resize, swap
-```
-std::deque
-```
-    at, operator[], front, back,
-    empty, size, max_size, shrink_to_fit,
-    clear, insert, erase, push_back, pop_back, push_front, pop_front, resize, swap
-```
-std::list
-```
-    front, back, empty, size, max_size,
-    clear, insert, erase, push_back, pop_back, push_front, pop_front, resize, swap,
-    merge, splice, remove, remove_if, reverse, unique, sort
-```
-std::forward_list
-```
-    front, empty, max_size,
-    clear, insert_after, erase_after, push_front, pop_front, resize, swap
-    merge, splice_after, remove, remove_if, reverse, unique, sort
-```
-std::set
-```    
-    empty, size, max_size, 
-    clear, insert, erase, swap,
-    count, find, equal_range, lower_bound, upper_bound
-```
-std::map
-```    
-    at, operator[], empty, size, max_size, 
-    clear, insert, erase, swap,
-    count, find, equal_range, lower_bound, upper_bound
-```
-std::multiset
-```
-    empty, size, max_size, 
-    clear, insert, erase, swap,
-    count, find, equal_range, lower_bound, upper_bound
-```    
-std::multimap
-```
-    empty, size, max_size,
-    clear, insert, erase, swap, 
-    count, find, equal_range, lower_bound, upper_bound
-```
-std::unordered_set
-```    
-    empty, size, max_size, 
-    clear, insert, erase, swap,
-    count, find, equal_range,
-    rehash, reserve
-```
-std::unordered_map
-```    
-    empty, size, max_size, 
-    clear, insert, erase, swap,
-    at, operator[], count, find, equal_range,
-    rehash, reserve
-```
-std::unordered_multiset
-```
-    empty, size, max_size, 
-    clear, insert, erase, swap,
-    count, find, equal_range,
-    rehash, reserve
-```        
-std::unordered_multimap
-```
-    empty, size, max_size,
-    clear, insert, erase, swap, 
-    count, find, equal_range,
-    rehash, reserve
-```
-
-You can always test more methods if you find it important to prove some point.
-
-
-# Compilation
-
-## Manual compilation
-
-```bash
-
-mkdir build-debug && cd build-debug
-cmake -DCMAKE_BUILD_TYPE=Debug ../
-make -j4
-
-mkdir build-release && cd build-release
-cmake -DCMAKE_BUILD_TYPE=Release ../
-make -j4
-
-```
-
-## Compilation from CLion
-
-```bash
-File -> Open... -> [Select directory with CMakeLists.txt]
-```
-
-Build profile for optimized build:
-
-```bash
-File -> Settings... -> Build, Execution, Deveopment -> CMake -> [Click '+' to add new 'Profile' with 'Build Type' 'Release']
-```
+    6. Using random data we are closer to the correct test result, because data is not in the order we set, which
+    can be e.g. easy to sort. Repeating the test on random data, we can see the real average operation time.

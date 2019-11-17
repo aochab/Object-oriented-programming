@@ -24,17 +24,21 @@ struct Medium {
 
     bool operator<(const Medium &rhs) const {
 
-       if(std::lexicographical_compare(this->data,this->data+SIZE,rhs.data,rhs.data+SIZE))
-           return true;
-
-        return false;
+        for(int i=0; i<SIZE; i++) {
+           if (this->data[i] >= rhs.data[i])
+               return false;
+        }
+        return true;
     }
 
     bool operator==(const Medium &rhs) const {
 
-        if(std::equal(this->data,this->data+SIZE,rhs.data))
-            return true;
-        return false;
+        for(int i=0; i<SIZE; i++) {
+            if (this->data[i] != rhs.data[i])
+                return false;
+        }
+
+        return true;
     }
 };
 
