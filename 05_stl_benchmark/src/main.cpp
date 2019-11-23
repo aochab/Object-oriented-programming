@@ -1,5 +1,6 @@
 #include <iostream>
-
+#include "Small.h"
+#include <set>
 #include "Dummy.h"
 
 int main(int argc, char* argv[])
