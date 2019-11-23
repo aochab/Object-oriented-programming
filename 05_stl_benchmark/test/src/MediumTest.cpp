@@ -164,9 +164,9 @@ TEST(MediumTest, HashFunction) {
     for(int i=0;i<medium.SIZE;i++)
     {
         medium.data[i]=i;
-        value += i;
+        value += medium.data[i]*i;
     }
-    value %= medium.SIZE;
+
     auto medium_hash = std::hash<Medium>{}(medium);
     EXPECT_EQ(value,medium_hash);
 }
@@ -178,9 +178,9 @@ TEST(MediumTest, HashFunction2) {
     for(int i=0;i<medium.SIZE;i++)
     {
         medium.data[i]=i;
-        value += i;
+        value += medium.data[i]*(i+1);
     }
-    value %= medium.SIZE+2;
+
     auto medium_hash = std::hash<Medium>{}(medium);
     EXPECT_NE(value,medium_hash);
 }

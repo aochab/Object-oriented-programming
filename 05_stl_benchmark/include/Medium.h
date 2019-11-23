@@ -50,9 +50,9 @@ namespace std {
             long hashValue=0;
             for(int i=0;i<d.SIZE;i++)
             {
-                hashValue += d.data[i];
+                hashValue += d.data[i]*i;
             }
-            return hashValue%d.SIZE;
+            return hashValue;
         }
     };
 }

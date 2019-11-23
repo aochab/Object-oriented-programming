@@ -9,15 +9,11 @@ static void comparisonTimeLarge(State& state) {
     large2.randomize();
     for (auto _ : state) {
 
-        auto comparison = large1 < large2;
-
-        DoNotOptimize(comparison);
+        large1 < large2;
     }
-
-    state.SetComplexityN(state.range(0));
 }
 
-BENCHMARK(comparisonTimeLarge)->RangeMultiplier(2)->Range(1 << 5, 1 << 18)->Complexity();
+BENCHMARK(comparisonTimeLarge);
 
 static void equalityTimeLarge(State& state) {
 
@@ -27,28 +23,21 @@ static void equalityTimeLarge(State& state) {
     large2.randomize();
     for (auto _ : state) {
 
-        auto equality = large1 == large2;
-
-        DoNotOptimize(equality);
+        large1 == large2;
     }
-
-    state.SetComplexityN(state.range(0));
 }
 
-BENCHMARK(equalityTimeLarge)->RangeMultiplier(2)->Range(1 << 5, 1 << 18)->Complexity();
+BENCHMARK(equalityTimeLarge);
 
 static void hashTimeLarge(State& state)
 {
     Large large{};
     large.randomize();
     for(auto _ : state) {
-        auto hash = std::hash<Large>{}(large);
 
-        DoNotOptimize(hash);
+        std::hash<Large>{}(large);
     }
-
-    state.SetComplexityN(state.range(0));
 }
 
-BENCHMARK(hashTimeLarge)->RangeMultiplier(2)->Range(1 << 5, 1 << 18)->Complexity();
+BENCHMARK(hashTimeLarge);
 

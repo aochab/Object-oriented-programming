@@ -166,9 +166,8 @@ TEST(LargeTest, HashFunction) {
     for(int i=0; i < large.SIZE; i++)
     {
         large.data[i]=i;
-        value += i;
+        value += large.data[i]*i;
     }
-    value %= large.SIZE;
     auto large_hash = std::hash<Large> {}(large);
     EXPECT_EQ(value, large_hash);
 }
@@ -180,9 +179,9 @@ TEST(LargeTest, HashFunction2) {
     for(int i=0; i < large.SIZE; i++)
     {
         large.data[i]=i;
-        value += i;
+        value += large.data[i]*(i+1);
     }
-    value %= large.SIZE + 1;
+
     auto large_hash = std::hash<Large>{}(large);
     EXPECT_NE(value,large_hash);
 }

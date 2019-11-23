@@ -9,15 +9,11 @@ static void comparisonTimeMedium(State& state) {
     medium2.randomize();
     for (auto _ : state) {
 
-        auto comparison = medium1 < medium2;
-
-        DoNotOptimize(comparison);
+        medium1 < medium2;
     }
-
-    state.SetComplexityN(state.range(0));
 }
 
-BENCHMARK(comparisonTimeMedium)->RangeMultiplier(2)->Range(1 << 5, 1 << 18)->Complexity();
+BENCHMARK(comparisonTimeMedium);
 
 static void equalityTimeMedium(State& state) {
 
@@ -27,28 +23,21 @@ static void equalityTimeMedium(State& state) {
     medium2.randomize();
     for (auto _ : state) {
 
-        auto equality = medium1 == medium2;
-
-        DoNotOptimize(equality);
+        medium1 == medium2;
     }
-
-    state.SetComplexityN(state.range(0));
 }
 
-BENCHMARK(equalityTimeMedium)->RangeMultiplier(2)->Range(1 << 5, 1 << 18)->Complexity();
+BENCHMARK(equalityTimeMedium);
 
 static void hashTimeMedium(State& state)
 {
     Medium medium{};
     medium.randomize();
     for(auto _ : state) {
-        auto hash = std::hash<Medium>{}(medium);
 
-        DoNotOptimize(hash);
+        std::hash<Medium>{}(medium);
     }
-
-    state.SetComplexityN(state.range(0));
 }
 
-BENCHMARK(hashTimeMedium)->RangeMultiplier(2)->Range(1 << 5, 1 << 18)->Complexity();
+BENCHMARK(hashTimeMedium);
 
