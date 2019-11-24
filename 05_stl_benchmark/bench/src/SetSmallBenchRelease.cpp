@@ -15,7 +15,8 @@ static void EmptySetSmall(State& state) {
 
     for (auto _ : state) {
 
-        set.empty();
+        auto result = set.empty();
+        DoNotOptimize(result);
     }
 
     state.SetComplexityN(N);
@@ -38,7 +39,8 @@ static void SizeSetSmall(State& state) {
 
     for (auto _ : state) {
 
-        set.size();
+        auto result = set.size();
+        DoNotOptimize(result);
     }
 
     state.SetComplexityN(N);
@@ -62,7 +64,8 @@ static void Max_sizeSetSmall(State& state) {
 
     for (auto _ : state) {
 
-        set.max_size();
+        auto result = set.max_size();
+        DoNotOptimize(result);
     }
 
     state.SetComplexityN(N);
@@ -86,7 +89,9 @@ static void ClearSetSmall(State& state) {
         }
         state.ResumeTiming();
 
+        DoNotOptimize(set);
         set.clear();
+        ClobberMemory();
     }
 
     state.SetComplexityN(N);
@@ -113,7 +118,8 @@ static void InsertSetSmall(State& state) {
         s.randomize();
         state.ResumeTiming();
 
-        set.insert(s);
+        auto result = set.insert(s);
+        ClobberMemory();
     }
 
     state.SetComplexityN(N);
@@ -141,7 +147,8 @@ static void EraseSetSmall(State& state) {
         auto it = set.begin();
         state.ResumeTiming();
 
-        set.erase(it);
+        auto result = set.erase(it);
+        DoNotOptimize(result);
     }
 
     state.SetComplexityN(N);
@@ -169,7 +176,8 @@ static void EraseRangeSetSmall(State& state) {
         auto itE =set.end();
         state.ResumeTiming();
 
-        set.erase(it,itE);
+        auto result = set.erase(it,itE);
+        DoNotOptimize(result);
     }
 
     state.SetComplexityN(N);
@@ -196,7 +204,10 @@ static void SwapSetSmall(State& state) {
 
     for (auto _ : state) {
 
+        DoNotOptimize(set1);
+        DoNotOptimize(set2);
         set1.swap(set2);
+        ClobberMemory();
     }
 
     state.SetComplexityN(N);
@@ -218,7 +229,8 @@ static void CountSetSmall(State& state) {
 
     for (auto _ : state) {
 
-        set.count(s);
+        auto result = set.count(s);
+        DoNotOptimize(result);
     }
 
     state.SetComplexityN(N);
@@ -240,7 +252,8 @@ static void FindSetSmall(State& state) {
 
     for (auto _ : state) {
 
-        set.find(s);
+        auto result = set.find(s);
+        DoNotOptimize(result);
     }
 
     state.SetComplexityN(N);
@@ -262,7 +275,8 @@ static void Equal_rangeSetSmall(State& state) {
 
     for (auto _ : state) {
 
-        set.equal_range(s);
+        auto result = set.equal_range(s);
+        DoNotOptimize(result);
     }
 
     state.SetComplexityN(N);
@@ -284,7 +298,8 @@ static void Lower_boundSetSmall(State& state) {
 
     for (auto _ : state) {
 
-        set.lower_bound(s);
+        auto result = set.lower_bound(s);
+        DoNotOptimize(result);
     }
 
     state.SetComplexityN(N);
@@ -306,7 +321,8 @@ static void Upper_boundSetSmall(State& state) {
 
     for (auto _ : state) {
 
-        set.upper_bound(s);
+        auto result = set.upper_bound(s);
+        DoNotOptimize(result);
     }
 
     state.SetComplexityN(N);
