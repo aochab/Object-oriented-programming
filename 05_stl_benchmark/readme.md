@@ -23,7 +23,7 @@ _Used hardware:_
     3. A hash function is used to map data and give a special value which will identify that data.
     It is deterministic, universal, efficient.
     
-    4. I sum individual elements of the table and do module operation on that value.
+    4. I sum individual elements of the table multiplied by their index in the array.
     Thanks to this we get a relatively unique number, describing our data.
 
 2. Unit test for operators and hash functions
@@ -36,11 +36,9 @@ _Used hardware:_
     
 3. Benchmarks for operators and hash functions
 
-    1. Create void function and initialize objects to test. Inside for loop is code we want to test 
-    and we use DoNotOptimize to store result in memory or register. We make test executable by adding 
-    an expression BENCHMARK(<test_name>)->Range... In this benchmarks we test complexity. As a result 
-    we get the coefficient for the high-order term in the running time and the normalized root-mean square
-    error.
+    1. Create void function and initialize objects to test. Inside for loop is code we want to test. 
+    If necessary, objects are filled with data with each iteration.
+    We make test executable by adding an expression BENCHMARK(<test_name>). 
     
     2. Yes, there are consequences. It use implemented functions to sort the data. So, when our implementation
     is slow, all operations in sequential containers are slower.
@@ -66,3 +64,18 @@ _Used hardware:_
     
     6. Using random data we are closer to the correct test result, because data is not in the order we set, which
     can be e.g. easy to sort. Repeating the test on random data, we can see the real average operation time.
+    
+4. Create benchmarks for assigned containers/methods using Small type and Debug build
+
+    1. It is similar to the previous call, but we also add during a call information in what range we want to
+    test complexity. 
+    
+    3. Not in every benchmark. This is because my implementation is slower or i gave too small range of test.
+    
+    4. We must always have the same amount of data to the right range. So we need to fill the array, or delete it,
+    with each iteration. To add or delete data I use pause/resume timing method. Thanks to that, the time of these
+    operations is not included in the benchmarks.
+    
+5. Appropriate escape functions to prevent optimization and run benchmarks in Release build
+    
+    2. DoNotOptimize() and ClobberMemory() cause, that data is not optimized and no objects are skipped.

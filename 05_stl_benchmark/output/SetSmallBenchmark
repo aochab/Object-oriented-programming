@@ -1,0 +1,182 @@
+2019-11-23 18:08:57
+Running ./05_stl_benchmark_bench
+Run on (4 X 2494.23 MHz CPU s)
+CPU Caches:
+  L1 Data 32K (x4)
+  L1 Instruction 32K (x4)
+  L2 Unified 256K (x4)
+  L3 Unified 3072K (x4)
+Load Average: 1.57, 1.64, 1.28
+***WARNING*** Library was built as DEBUG. Timings may be affected.
+-------------------------------------------------------------------
+Benchmark                         Time             CPU   Iterations
+-------------------------------------------------------------------
+EmptySetSmall/1                34.8 ns         34.8 ns     20451710
+EmptySetSmall/2                34.3 ns         34.3 ns     20471236
+EmptySetSmall/4                34.5 ns         34.5 ns     20518870
+EmptySetSmall/8                34.9 ns         34.8 ns     20176470
+EmptySetSmall/16               34.0 ns         34.0 ns     19669969
+EmptySetSmall/32               35.2 ns         35.2 ns     20365607
+EmptySetSmall/64               34.9 ns         34.9 ns     20095127
+EmptySetSmall/128              34.9 ns         34.9 ns     20608309
+EmptySetSmall/256              36.7 ns         36.7 ns     20181822
+EmptySetSmall/512              34.5 ns         34.5 ns     20316363
+EmptySetSmall/1024             36.2 ns         36.2 ns     20408284
+EmptySetSmall_BigO            34.99 (1)       34.98 (1)  
+EmptySetSmall_RMS                 2 %             2 %    
+SizeSetSmall/1                 33.9 ns         33.9 ns     18253788
+SizeSetSmall/2                 41.5 ns         41.5 ns     17115630
+SizeSetSmall/4                 54.3 ns         54.3 ns     10000000
+SizeSetSmall/8                 62.3 ns         62.3 ns     10000000
+SizeSetSmall/16                51.3 ns         51.1 ns     13994815
+SizeSetSmall/32                62.3 ns         62.3 ns     10000000
+SizeSetSmall/64                39.6 ns         39.7 ns     15587425
+SizeSetSmall/128               51.3 ns         51.3 ns     17509941
+SizeSetSmall/256               59.9 ns         59.9 ns      8969369
+SizeSetSmall/512               43.8 ns         43.8 ns     14431169
+SizeSetSmall/1024              50.2 ns         50.1 ns     10607705
+SizeSetSmall_BigO             50.04 (1)       50.01 (1)  
+SizeSetSmall_RMS                 18 %            18 %    
+Max_sizeSetSmall/1             91.1 ns         91.1 ns      7980867
+Max_sizeSetSmall/2             78.2 ns         78.2 ns      9809259
+Max_sizeSetSmall/4             87.6 ns         87.6 ns     10042804
+Max_sizeSetSmall/8             80.3 ns         80.3 ns      8694826
+Max_sizeSetSmall/16             126 ns          126 ns      7938825
+Max_sizeSetSmall/32            82.3 ns         82.3 ns      7950814
+Max_sizeSetSmall/64            64.7 ns         64.6 ns     10574621
+Max_sizeSetSmall/128           86.9 ns         86.9 ns     10060762
+Max_sizeSetSmall/256           87.6 ns         87.6 ns      9437748
+Max_sizeSetSmall/512            118 ns          118 ns      7295428
+Max_sizeSetSmall/1024          89.6 ns         89.6 ns      5650388
+Max_sizeSetSmall_BigO         90.29 (1)       90.29 (1)  
+Max_sizeSetSmall_RMS             19 %            19 %    
+ClearSetSmall/1                1983 ns         2034 ns       401202
+ClearSetSmall/2                1799 ns         1764 ns       317087
+ClearSetSmall/4                2258 ns         2216 ns       333053
+ClearSetSmall/8                3028 ns         2992 ns       230903
+ClearSetSmall/16               4655 ns         4608 ns       146563
+ClearSetSmall/32               7980 ns         7885 ns        91489
+ClearSetSmall/64              14011 ns        13873 ns        52294
+ClearSetSmall/128             23359 ns        23102 ns        30265
+ClearSetSmall/256             37765 ns        37274 ns        19168
+ClearSetSmall/512             50557 ns        49655 ns        13921
+ClearSetSmall/1024            57267 ns        56022 ns        12632
+ClearSetSmall_BigO          4289.11 lgN     4216.32 lgN  
+ClearSetSmall_RMS                52 %            52 %    
+InsertSetSmall/1               2103 ns         2092 ns       323423
+InsertSetSmall/2               2307 ns         2293 ns       306525
+InsertSetSmall/4               2315 ns         2271 ns       270891
+InsertSetSmall/8               2501 ns         2489 ns       279608
+InsertSetSmall/16              2669 ns         2613 ns       275046
+InsertSetSmall/32              2948 ns         2859 ns       231212
+InsertSetSmall/64              3484 ns         3282 ns       243856
+InsertSetSmall/128             3378 ns         3010 ns       239369
+InsertSetSmall/256             3606 ns         3035 ns       224250
+InsertSetSmall/512             4514 ns         3475 ns       213802
+InsertSetSmall/1024            4796 ns         3542 ns       196111
+InsertSetSmall_BigO         3147.32 (1)     2814.71 (1)  
+InsertSetSmall_RMS               27 %            17 %    
+EraseSetSmall/1                1599 ns         1598 ns       442156
+EraseSetSmall/2                1583 ns         1584 ns       437219
+EraseSetSmall/4                1603 ns         1610 ns       433674
+EraseSetSmall/8                1582 ns         1577 ns       444062
+EraseSetSmall/16               1559 ns         1561 ns       439906
+EraseSetSmall/32               1668 ns         1669 ns       433018
+EraseSetSmall/64               1576 ns         1575 ns       448022
+EraseSetSmall/128              1575 ns         1572 ns       437897
+EraseSetSmall/256              1608 ns         1608 ns       431379
+EraseSetSmall/512              1597 ns         1594 ns       435041
+EraseSetSmall/1024             1558 ns         1559 ns       437407
+EraseSetSmall_BigO          1591.64 (1)     1591.56 (1)  
+EraseSetSmall_RMS                 2 %             2 %    
+EraseRangeSetSmall/1           1673 ns         1658 ns       392415
+EraseRangeSetSmall/2           1898 ns         1886 ns       375947
+EraseRangeSetSmall/4           2370 ns         2341 ns       299663
+EraseRangeSetSmall/8           3169 ns         3139 ns       229183
+EraseRangeSetSmall/16          4805 ns         4762 ns       134334
+EraseRangeSetSmall/32          7928 ns         7854 ns        87874
+EraseRangeSetSmall/64         15024 ns        14837 ns        50776
+EraseRangeSetSmall/128        24289 ns        23961 ns        26391
+EraseRangeSetSmall/256        38110 ns        37543 ns        19091
+EraseRangeSetSmall/512        51792 ns        50815 ns        13220
+EraseRangeSetSmall/1024       68565 ns        65961 ns        12341
+EraseRangeSetSmall_BigO       79.34 N         76.93 N    
+EraseRangeSetSmall_RMS           47 %            48 %    
+SwapSetSmall/1                  226 ns          226 ns      2626005
+SwapSetSmall/2                  240 ns          240 ns      2918830
+SwapSetSmall/4                  248 ns          248 ns      2734100
+SwapSetSmall/8                  250 ns          249 ns      2568586
+SwapSetSmall/16                 259 ns          259 ns      2604080
+SwapSetSmall/32                 251 ns          251 ns      2886783
+SwapSetSmall/64                 245 ns          245 ns      3309400
+SwapSetSmall/128                230 ns          230 ns      3076228
+SwapSetSmall/256                260 ns          260 ns      2647106
+SwapSetSmall/512                258 ns          258 ns      2937113
+SwapSetSmall/1024               254 ns          254 ns      2744744
+SwapSetSmall_BigO            247.27 (1)      247.21 (1)  
+SwapSetSmall_RMS                  4 %             4 %    
+CountSetSmall/1                 399 ns          399 ns      1627037
+CountSetSmall/2                 477 ns          477 ns      1473119
+CountSetSmall/4                 500 ns          500 ns      1233190
+CountSetSmall/8                 602 ns          601 ns       936113
+CountSetSmall/16                775 ns          775 ns       986417
+CountSetSmall/32               1277 ns         1277 ns       478985
+CountSetSmall/64               1204 ns         1204 ns       644039
+CountSetSmall/128              1646 ns         1646 ns       477803
+CountSetSmall/256              1475 ns         1475 ns       376958
+CountSetSmall/512              1684 ns         1683 ns       410867
+CountSetSmall/1024             1605 ns         1605 ns       457359
+CountSetSmall_BigO           193.53 lgN      193.51 lgN  
+CountSetSmall_RMS                21 %            21 %    
+FindSetSmall/1                  453 ns          453 ns      1611809
+FindSetSmall/2                  603 ns          603 ns      1288232
+FindSetSmall/4                  716 ns          716 ns       818151
+FindSetSmall/8                  853 ns          852 ns       812035
+FindSetSmall/16                 995 ns          995 ns       753503
+FindSetSmall/32                1152 ns         1152 ns       615196
+FindSetSmall/64                1311 ns         1311 ns       542109
+FindSetSmall/128               1396 ns         1396 ns       503257
+FindSetSmall/256               1273 ns         1273 ns       467632
+FindSetSmall/512               1451 ns         1451 ns       488577
+FindSetSmall/1024              1291 ns         1291 ns       519613
+FindSetSmall_BigO            176.96 lgN      176.94 lgN  
+FindSetSmall_RMS                 31 %            31 %    
+Equal_rangeSetSmall/1           548 ns          548 ns      1077224
+Equal_rangeSetSmall/2           781 ns          781 ns       913402
+Equal_rangeSetSmall/4           713 ns          713 ns      1032106
+Equal_rangeSetSmall/8          1080 ns         1080 ns      1004948
+Equal_rangeSetSmall/16          906 ns          906 ns       777497
+Equal_rangeSetSmall/32         1304 ns         1304 ns       725151
+Equal_rangeSetSmall/64         1433 ns         1433 ns       560640
+Equal_rangeSetSmall/128        1767 ns         1767 ns       490140
+Equal_rangeSetSmall/256        1739 ns         1739 ns       395361
+Equal_rangeSetSmall/512        2018 ns         2010 ns       374884
+Equal_rangeSetSmall/1024       2180 ns         2180 ns       313530
+Equal_rangeSetSmall_BigO     234.89 lgN      234.69 lgN  
+Equal_rangeSetSmall_RMS          22 %            22 %    
+Lower_boundSetSmall/1           222 ns          222 ns      3564685
+Lower_boundSetSmall/2           379 ns          379 ns      1863426
+Lower_boundSetSmall/4           429 ns          428 ns      1374018
+Lower_boundSetSmall/8           576 ns          575 ns      1149819
+Lower_boundSetSmall/16          745 ns          745 ns      1391333
+Lower_boundSetSmall/32          783 ns          782 ns       766120
+Lower_boundSetSmall/64          805 ns          805 ns       630880
+Lower_boundSetSmall/128         820 ns          820 ns       965203
+Lower_boundSetSmall/256        1002 ns         1001 ns       713518
+Lower_boundSetSmall/512        1200 ns         1199 ns       717041
+Lower_boundSetSmall/1024        811 ns          810 ns       795333
+Lower_boundSetSmall_BigO     122.96 lgN      122.89 lgN  
+Lower_boundSetSmall_RMS          29 %            29 %    
+Upper_boundSetSmall/1           201 ns          200 ns      3523132
+Upper_boundSetSmall/2           305 ns          305 ns      2275930
+Upper_boundSetSmall/4           411 ns          411 ns      1734875
+Upper_boundSetSmall/8           509 ns          508 ns      1385961
+Upper_boundSetSmall/16          508 ns          507 ns      1171523
+Upper_boundSetSmall/32          593 ns          592 ns      1177203
+Upper_boundSetSmall/64         1004 ns         1004 ns       795830
+Upper_boundSetSmall/128         804 ns          804 ns       925996
+Upper_boundSetSmall/256         820 ns          820 ns       873084
+Upper_boundSetSmall/512         900 ns          901 ns       881861
+Upper_boundSetSmall/1024        965 ns          965 ns       651075
+Upper_boundSetSmall_BigO     113.29 lgN      113.27 lgN  
+Upper_boundSetSmall_RMS          26 %            26 %    
