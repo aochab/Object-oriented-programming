@@ -1,0 +1,154 @@
+2019-11-27 23:34:30
+Running ./05_stl_benchmark_bench
+Run on (4 X 2494.23 MHz CPU s)
+CPU Caches:
+  L1 Data 32K (x4)
+  L1 Instruction 32K (x4)
+  L2 Unified 256K (x4)
+  L3 Unified 3072K (x4)
+Load Average: 0.39, 0.24, 0.59
+-------------------------------------------------------------------
+Benchmark                         Time             CPU   Iterations
+-------------------------------------------------------------------
+EmptySetMedium/1               3.08 ns         3.07 ns    211738230
+EmptySetMedium/2               2.86 ns         2.85 ns    225151257
+EmptySetMedium/4               3.13 ns         3.13 ns    246451029
+EmptySetMedium/8               4.02 ns         3.91 ns    204333335
+EmptySetMedium/16              4.34 ns         4.32 ns    180186828
+EmptySetMedium/32              3.90 ns         3.90 ns    176839572
+EmptySetMedium/64              3.84 ns         3.83 ns    182678901
+EmptySetMedium/128             3.91 ns         3.88 ns    182684781
+EmptySetMedium/256             3.92 ns         3.91 ns    189464053
+EmptySetMedium/512             4.00 ns         4.00 ns    161432169
+EmptySetMedium/1024            3.02 ns         3.02 ns    208788490
+EmptySetMedium_BigO            3.64 (1)        3.62 (1)  
+EmptySetMedium_RMS               13 %            13 %    
+SizeSetMedium/1                2.67 ns         2.66 ns    264463316
+SizeSetMedium/2                2.68 ns         2.68 ns    264744429
+SizeSetMedium/4                2.70 ns         2.70 ns    256216437
+SizeSetMedium/8                2.76 ns         2.74 ns    248176981
+SizeSetMedium/16               2.98 ns         2.98 ns    224229246
+SizeSetMedium/32               2.76 ns         2.76 ns    268601141
+SizeSetMedium/64               3.20 ns         3.13 ns    257535647
+SizeSetMedium/128              3.23 ns         3.19 ns    205165528
+SizeSetMedium/256              2.88 ns         2.87 ns    237688722
+SizeSetMedium/512              2.85 ns         2.85 ns    248941441
+SizeSetMedium/1024             3.27 ns         3.27 ns    244983924
+SizeSetMedium_BigO             2.91 (1)        2.89 (1)  
+SizeSetMedium_RMS                 7 %             7 %    
+Max_sizeSetMedium/1            3.19 ns         3.17 ns    217846569
+Max_sizeSetMedium/2            3.37 ns         3.37 ns    202831458
+Max_sizeSetMedium/4            3.09 ns         3.09 ns    210956325
+Max_sizeSetMedium/8            3.27 ns         3.24 ns    217362383
+Max_sizeSetMedium/16           3.01 ns         2.99 ns    223504404
+Max_sizeSetMedium/32           2.67 ns         2.66 ns    254637139
+Max_sizeSetMedium/64           2.53 ns         2.53 ns    273654825
+Max_sizeSetMedium/128          2.72 ns         2.71 ns    279789022
+Max_sizeSetMedium/256          2.41 ns         2.40 ns    294500332
+Max_sizeSetMedium/512          2.49 ns         2.49 ns    294775852
+Max_sizeSetMedium/1024         2.58 ns         2.57 ns    282405361
+Max_sizeSetMedium_BigO         2.85 (1)        2.84 (1)  
+Max_sizeSetMedium_RMS            12 %            11 %    
+ClearSetMedium/1               1247 ns         1175 ns       527987
+ClearSetMedium/2               1436 ns         1246 ns       530251
+ClearSetMedium/4               1557 ns         1347 ns       535027
+ClearSetMedium/8               1785 ns         1457 ns       489470
+ClearSetMedium/16              2135 ns         1675 ns       392452
+ClearSetMedium/32              2618 ns         1910 ns       362237
+ClearSetMedium/64              5738 ns         3702 ns       286322
+ClearSetMedium/128             3157 ns         2189 ns       279750
+ClearSetMedium/256             6181 ns         3998 ns       304670
+ClearSetMedium/512             5161 ns         3428 ns       243379
+ClearSetMedium/1024            5313 ns         3529 ns       176940
+ClearSetMedium_BigO          615.81 lgN      416.13 lgN  
+ClearSetMedium_RMS               30 %            30 %    
+InsertSetMedium/1              1281 ns         1127 ns       568031
+InsertSetMedium/2              1357 ns         1154 ns       611041
+InsertSetMedium/4              1557 ns         1255 ns       555776
+InsertSetMedium/8              1847 ns         1381 ns       497174
+InsertSetMedium/16             2023 ns         1427 ns       418334
+InsertSetMedium/32             2331 ns         1536 ns       464200
+InsertSetMedium/64             3110 ns         1902 ns       383473
+InsertSetMedium/128            3598 ns         2079 ns       397689
+InsertSetMedium_BigO        2137.88 (1)     1482.42 (1)  
+InsertSetMedium_RMS              37 %            22 %    
+EraseSetMedium/1               1373 ns         1311 ns       531430
+EraseSetMedium/2               1319 ns         1257 ns       554604
+EraseSetMedium/4               1325 ns         1255 ns       551069
+EraseSetMedium/8               1328 ns         1265 ns       548296
+EraseSetMedium/16              1317 ns         1257 ns       566852
+EraseSetMedium/32              1328 ns         1256 ns       551552
+EraseSetMedium/64              1321 ns         1262 ns       560532
+EraseSetMedium/128             1335 ns         1273 ns       550119
+EraseSetMedium_BigO         1330.76 (1)     1266.95 (1)  
+EraseSetMedium_RMS                1 %             1 %    
+EraseRangeSetMedium/1          1268 ns         1201 ns       584186
+EraseRangeSetMedium/2          1444 ns         1303 ns       554094
+EraseRangeSetMedium/4          1621 ns         1387 ns       504204
+EraseRangeSetMedium/8          2060 ns         1639 ns       429693
+EraseRangeSetMedium/16         2759 ns         2023 ns       339797
+EraseRangeSetMedium/32         2873 ns         2049 ns       333959
+EraseRangeSetMedium/64         3676 ns         2480 ns       281470
+EraseRangeSetMedium/128        3182 ns         2204 ns       254751
+EraseRangeSetMedium_BigO    2360.45 (1)     1785.78 (1)  
+EraseRangeSetMedium_RMS          35 %            25 %    
+SwapSetMedium/1                11.9 ns         11.9 ns     60028361
+SwapSetMedium/2                11.6 ns         11.6 ns     59878395
+SwapSetMedium/4                11.6 ns         11.5 ns     60947761
+SwapSetMedium/8                11.6 ns         11.6 ns     59620925
+SwapSetMedium/16               11.6 ns         11.6 ns     60246910
+SwapSetMedium/32               11.6 ns         11.6 ns     60028141
+SwapSetMedium/64               11.6 ns         11.6 ns     59852607
+SwapSetMedium/128              11.7 ns         11.6 ns     60626174
+SwapSetMedium_BigO            11.65 (1)       11.63 (1)  
+SwapSetMedium_RMS                 1 %             1 %    
+CountSetMedium/1               14.7 ns         14.7 ns     45429040
+CountSetMedium/2               35.4 ns         35.3 ns     47197349
+CountSetMedium/4               15.0 ns         15.0 ns     33619406
+CountSetMedium/8               20.8 ns         20.8 ns     27209264
+CountSetMedium/16              20.9 ns         20.9 ns     46104155
+CountSetMedium/32              33.2 ns         33.2 ns     45590525
+CountSetMedium/64              15.3 ns         15.2 ns     45760355
+CountSetMedium/128             21.1 ns         21.1 ns     47755700
+CountSetMedium_BigO           22.06 (1)       22.03 (1)  
+CountSetMedium_RMS               34 %            34 %    
+FindSetMedium/1                14.1 ns         14.1 ns     48956305
+FindSetMedium/2                20.3 ns         20.3 ns     48808023
+FindSetMedium/4                32.9 ns         32.9 ns     26806762
+FindSetMedium/8                24.4 ns         24.3 ns     24645034
+FindSetMedium/16               46.3 ns         46.2 ns     49070768
+FindSetMedium/32               20.5 ns         20.5 ns     46036825
+FindSetMedium/64               38.9 ns         38.9 ns     35375567
+FindSetMedium/128              20.5 ns         20.5 ns     49083650
+FindSetMedium_BigO            27.23 (1)       27.21 (1)  
+FindSetMedium_RMS                38 %            38 %    
+Equal_rangeSetMedium/1         31.2 ns         31.2 ns     22275146
+Equal_rangeSetMedium/2         54.4 ns         54.4 ns     10000000
+Equal_rangeSetMedium/4         49.7 ns         49.7 ns     29703334
+Equal_rangeSetMedium/8         40.8 ns         40.8 ns     21434742
+Equal_rangeSetMedium/16        36.4 ns         36.4 ns     19270820
+Equal_rangeSetMedium/32        40.6 ns         40.6 ns     29973247
+Equal_rangeSetMedium/64        23.0 ns         23.0 ns     31126929
+Equal_rangeSetMedium/128       54.1 ns         54.1 ns     10000000
+Equal_rangeSetMedium_BigO      41.28 (1)       41.28 (1)  
+Equal_rangeSetMedium_RMS         25 %            25 %    
+Lower_boundSetMedium/1         10.0 ns         10.0 ns     69084209
+Lower_boundSetMedium/2         11.1 ns         11.1 ns     68254678
+Lower_boundSetMedium/4         9.87 ns         9.87 ns     63213591
+Lower_boundSetMedium/8         11.0 ns         11.0 ns     63043113
+Lower_boundSetMedium/16        11.0 ns         11.0 ns     69671778
+Lower_boundSetMedium/32        10.0 ns         10.0 ns     70311397
+Lower_boundSetMedium/64        21.7 ns         21.7 ns     70206381
+Lower_boundSetMedium/128       10.4 ns         10.4 ns     69525928
+Lower_boundSetMedium_BigO      11.90 (1)       11.90 (1)  
+Lower_boundSetMedium_RMS         31 %            31 %    
+Upper_boundSetMedium/1         9.83 ns         9.82 ns     74121066
+Upper_boundSetMedium/2         10.8 ns         10.8 ns     70311565
+Upper_boundSetMedium/4         9.83 ns         9.83 ns     64732822
+Upper_boundSetMedium/8         10.8 ns         10.8 ns     70799758
+Upper_boundSetMedium/16        20.9 ns         20.9 ns     64936353
+Upper_boundSetMedium/32        15.6 ns         15.5 ns     69743955
+Upper_boundSetMedium/64        9.81 ns         9.81 ns     71033015
+Upper_boundSetMedium/128       9.83 ns         9.83 ns     67766599
+Upper_boundSetMedium_BigO      12.17 (1)       12.17 (1)  
+Upper_boundSetMedium_RMS         31 %            31 %    

@@ -97,7 +97,7 @@ static void ClearUnorderedMultisetMedium(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(ClearUnorderedMultisetMedium)->RangeMultiplier(2)->Range(1<<5, 1<<15)->Complexity();
+BENCHMARK(ClearUnorderedMultisetMedium)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //========================================================================================
 
@@ -128,7 +128,7 @@ static void InsertUnorderedMultisetMedium(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(InsertUnorderedMultisetMedium)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(InsertUnorderedMultisetMedium)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //========================================================================================
 
@@ -157,7 +157,7 @@ static void EraseUnorderedMultisetMedium(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(EraseUnorderedMultisetMedium)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(EraseUnorderedMultisetMedium)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //========================================================================================
 
@@ -187,7 +187,7 @@ static void EraseRangeUnorderedMultisetMedium(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(EraseRangeUnorderedMultisetMedium)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(EraseRangeUnorderedMultisetMedium)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //========================================================================================
 
@@ -216,7 +216,7 @@ static void SwapUnorderedMultisetMedium(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(SwapUnorderedMultisetMedium)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(SwapUnorderedMultisetMedium)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //========================================================================================
 
@@ -240,7 +240,7 @@ static void CountUnorderedMultisetMedium(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(CountUnorderedMultisetMedium)->RangeMultiplier(2)->Range(1, 1<<15)->Complexity();
+BENCHMARK(CountUnorderedMultisetMedium)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //========================================================================================
 
@@ -264,7 +264,7 @@ static void FindUnorderedMultisetMedium(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(FindUnorderedMultisetMedium)->RangeMultiplier(2)->Range(1, 1<<15)->Complexity();
+BENCHMARK(FindUnorderedMultisetMedium)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //========================================================================================
 
@@ -288,7 +288,7 @@ static void Equal_rangeUnorderedMultisetMedium(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(Equal_rangeUnorderedMultisetMedium)->RangeMultiplier(2)->Range(1<<5, 1<<18)->Complexity();
+BENCHMARK(Equal_rangeUnorderedMultisetMedium)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //========================================================================================
 
@@ -316,7 +316,7 @@ static void RehashUnorderedMultisetMedium(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(RehashUnorderedMultisetMedium)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(RehashUnorderedMultisetMedium)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //========================================================================================
 
@@ -343,4 +343,4 @@ static void ReserveUnorderedMultisetMedium(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(ReserveUnorderedMultisetMedium)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReserveUnorderedMultisetMedium)->RangeMultiplier(2)->Range(1, 128)->Complexity();

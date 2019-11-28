@@ -23,7 +23,7 @@ static void FrontForwardListLarge(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(FrontForwardListLarge)->RangeMultiplier(2)->Range(1, 1<<18)->Complexity();
+BENCHMARK(FrontForwardListLarge)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 //============================================================================================
 
@@ -127,7 +127,7 @@ static void InsertAfterForwardListLarge(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(InsertAfterForwardListLarge)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(InsertAfterForwardListLarge)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 static void InsertAfterCountForwardListLarge(State& state) {
 
@@ -154,7 +154,7 @@ static void InsertAfterCountForwardListLarge(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(InsertAfterCountForwardListLarge)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(InsertAfterCountForwardListLarge)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 static void InsertAfterRangeForwardListLarge(State& state) {
 
@@ -186,7 +186,7 @@ static void InsertAfterRangeForwardListLarge(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(InsertAfterRangeForwardListLarge)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(InsertAfterRangeForwardListLarge)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //============================================================================================
 
@@ -215,7 +215,7 @@ static void EraseAfterForwardListLarge(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(EraseAfterForwardListLarge)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(EraseAfterForwardListLarge)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 static void EraseAfterRangeForwardListLarge(State& state) {
 
@@ -245,7 +245,7 @@ static void EraseAfterRangeForwardListLarge(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(EraseAfterRangeForwardListLarge)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(EraseAfterRangeForwardListLarge)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //============================================================================================
 
@@ -273,7 +273,7 @@ static void PushFrontForwardListLarge(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(PushFrontForwardListLarge)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(PushFrontForwardListLarge)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //============================================================================================
 
@@ -300,7 +300,7 @@ static void ResizeForwardListLarge(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(ResizeForwardListLarge)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ResizeForwardListLarge)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //============================================================================================
 
@@ -329,7 +329,7 @@ static void SwapForwardListLarge(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(SwapForwardListLarge)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(SwapForwardListLarge)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 
 //============================================================================================
@@ -366,7 +366,7 @@ static void MergeForwardListLarge(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(MergeForwardListLarge)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(MergeForwardListLarge)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //============================================================================================
 
@@ -400,7 +400,7 @@ static void SpliceAfterForwardListLarge(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(SpliceAfterForwardListLarge)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(SpliceAfterForwardListLarge)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //============================================================================================
 
@@ -428,7 +428,7 @@ static void RemoveForwardListLarge(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(RemoveForwardListLarge)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(RemoveForwardListLarge)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //============================================================================================
 
@@ -456,7 +456,7 @@ static void RemoveIfForwardListLarge(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(RemoveIfForwardListLarge)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(RemoveIfForwardListLarge)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //============================================================================================
 
@@ -479,7 +479,7 @@ static void ReverseForwardListLarge(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(ReverseForwardListLarge)->RangeMultiplier(2)->Range(1<<5, 1<<20)->Complexity();
+BENCHMARK(ReverseForwardListLarge)->RangeMultiplier(2)->Range(1<<5, 128)->Complexity();
 
 //============================================================================================
 
@@ -507,7 +507,7 @@ static void UniqueForwardListLarge(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(UniqueForwardListLarge)->RangeMultiplier(2)->Range(1<<5, 1<<18)->Complexity();
+BENCHMARK(UniqueForwardListLarge)->RangeMultiplier(2)->Range(1<<5, 128)->Complexity();
 
 //============================================================================================
 
@@ -535,4 +535,4 @@ static void SortForwardListLarge(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(SortForwardListLarge)->RangeMultiplier(2)->Range(1<<5, 1<<18)->Complexity();
+BENCHMARK(SortForwardListLarge)->RangeMultiplier(2)->Range(1<<5, 128)->Complexity();

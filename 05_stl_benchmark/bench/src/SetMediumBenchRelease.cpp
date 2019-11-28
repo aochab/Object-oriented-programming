@@ -125,7 +125,7 @@ static void InsertSetMedium(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(InsertSetMedium)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(InsertSetMedium)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //===========================================================================
 
@@ -154,7 +154,7 @@ static void EraseSetMedium(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(EraseSetMedium)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(EraseSetMedium)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //===========================================================================
 
@@ -183,7 +183,7 @@ static void EraseRangeSetMedium(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(EraseRangeSetMedium)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(EraseRangeSetMedium)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 
 //===========================================================================
@@ -213,7 +213,7 @@ static void SwapSetMedium(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(SwapSetMedium)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(SwapSetMedium)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //===========================================================================
 
@@ -236,7 +236,7 @@ static void CountSetMedium(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(CountSetMedium)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(CountSetMedium)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //===========================================================================
 
@@ -259,7 +259,7 @@ static void FindSetMedium(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(FindSetMedium)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(FindSetMedium)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //===========================================================================
 
@@ -282,7 +282,7 @@ static void Equal_rangeSetMedium(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(Equal_rangeSetMedium)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(Equal_rangeSetMedium)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //===========================================================================
 
@@ -305,7 +305,7 @@ static void Lower_boundSetMedium(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(Lower_boundSetMedium)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(Lower_boundSetMedium)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //===========================================================================
 
@@ -328,4 +328,4 @@ static void Upper_boundSetMedium(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(Upper_boundSetMedium)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(Upper_boundSetMedium)->RangeMultiplier(2)->Range(1, 128)->Complexity();

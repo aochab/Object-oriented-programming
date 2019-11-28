@@ -125,7 +125,7 @@ static void InsertSetLarge(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(InsertSetLarge)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(InsertSetLarge)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //===========================================================================
 
@@ -154,7 +154,7 @@ static void EraseSetLarge(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(EraseSetLarge)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(EraseSetLarge)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //===========================================================================
 
@@ -183,7 +183,7 @@ static void EraseRangeSetLarge(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(EraseRangeSetLarge)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(EraseRangeSetLarge)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 
 //===========================================================================
@@ -213,7 +213,7 @@ static void SwapSetLarge(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(SwapSetLarge)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(SwapSetLarge)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //===========================================================================
 
@@ -236,7 +236,7 @@ static void CountSetLarge(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(CountSetLarge)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(CountSetLarge)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //===========================================================================
 
@@ -259,7 +259,7 @@ static void FindSetLarge(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(FindSetLarge)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(FindSetLarge)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //===========================================================================
 
@@ -282,7 +282,7 @@ static void Equal_rangeSetLarge(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(Equal_rangeSetLarge)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(Equal_rangeSetLarge)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //===========================================================================
 
@@ -305,7 +305,7 @@ static void Lower_boundSetLarge(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(Lower_boundSetLarge)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(Lower_boundSetLarge)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //===========================================================================
 
@@ -328,4 +328,4 @@ static void Upper_boundSetLarge(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(Upper_boundSetLarge)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(Upper_boundSetLarge)->RangeMultiplier(2)->Range(1, 128)->Complexity();

@@ -1,0 +1,176 @@
+2019-11-28 17:16:01
+Running ./05_stl_benchmark_bench
+Run on (4 X 2494.23 MHz CPU s)
+CPU Caches:
+  L1 Data 32K (x4)
+  L1 Instruction 32K (x4)
+  L2 Unified 256K (x4)
+  L3 Unified 3072K (x4)
+Load Average: 2.52, 2.14, 1.11
+------------------------------------------------------------------------------------
+Benchmark                                          Time             CPU   Iterations
+------------------------------------------------------------------------------------
+EmptyUnorderedMultisetMedium/1                  3.48 ns         3.48 ns    195310807
+EmptyUnorderedMultisetMedium/2                  3.64 ns         3.58 ns    194642170
+EmptyUnorderedMultisetMedium/4                  3.60 ns         3.54 ns    202647946
+EmptyUnorderedMultisetMedium/8                  3.46 ns         3.46 ns    200163604
+EmptyUnorderedMultisetMedium/16                 3.47 ns         3.47 ns    181334514
+EmptyUnorderedMultisetMedium/32                 3.57 ns         3.57 ns    178259379
+EmptyUnorderedMultisetMedium/64                 3.92 ns         3.92 ns    200725643
+EmptyUnorderedMultisetMedium/128                3.62 ns         3.59 ns    184830950
+EmptyUnorderedMultisetMedium/256                3.63 ns         3.62 ns    196660993
+EmptyUnorderedMultisetMedium/512                3.72 ns         3.71 ns    182492925
+EmptyUnorderedMultisetMedium/1024               4.09 ns         4.07 ns    193889607
+EmptyUnorderedMultisetMedium_BigO               3.65 (1)        3.64 (1)  
+EmptyUnorderedMultisetMedium_RMS                   5 %             5 %    
+SizeUnorderedMultisetMedium/1                   3.54 ns         3.54 ns    218686202
+SizeUnorderedMultisetMedium/2                   4.02 ns         4.02 ns    170816319
+SizeUnorderedMultisetMedium/4                   4.68 ns         4.67 ns    152949944
+SizeUnorderedMultisetMedium/8                   5.35 ns         5.35 ns    100000000
+SizeUnorderedMultisetMedium/16                  5.21 ns         5.21 ns    160638235
+SizeUnorderedMultisetMedium/32                  4.64 ns         4.64 ns    194306931
+SizeUnorderedMultisetMedium/64                  4.53 ns         4.53 ns    220537282
+SizeUnorderedMultisetMedium/128                 4.98 ns         4.74 ns    136441224
+SizeUnorderedMultisetMedium/256                 3.77 ns         3.75 ns    185853619
+SizeUnorderedMultisetMedium/512                 4.40 ns         4.39 ns    204932443
+SizeUnorderedMultisetMedium/1024                3.53 ns         3.53 ns    171844933
+SizeUnorderedMultisetMedium_BigO                4.42 (1)        4.40 (1)  
+SizeUnorderedMultisetMedium_RMS                   14 %            14 %    
+Max_sizeUnorderedMultisetMedium/1               3.71 ns         3.71 ns    178162302
+Max_sizeUnorderedMultisetMedium/2               5.45 ns         5.45 ns    150865211
+Max_sizeUnorderedMultisetMedium/4               4.05 ns         4.05 ns    194515109
+Max_sizeUnorderedMultisetMedium/8               3.40 ns         3.40 ns    202400268
+Max_sizeUnorderedMultisetMedium/16              3.69 ns         3.65 ns    199405150
+Max_sizeUnorderedMultisetMedium/32              3.66 ns         3.63 ns    191601137
+Max_sizeUnorderedMultisetMedium/64              3.31 ns         3.31 ns    218087295
+Max_sizeUnorderedMultisetMedium/128             3.57 ns         3.56 ns    213783303
+Max_sizeUnorderedMultisetMedium/256             4.00 ns         4.00 ns    213412191
+Max_sizeUnorderedMultisetMedium/512             5.87 ns         5.83 ns    100000000
+Max_sizeUnorderedMultisetMedium/1024            6.90 ns         6.89 ns    148642020
+Max_sizeUnorderedMultisetMedium_BigO            4.33 (1)        4.32 (1)  
+Max_sizeUnorderedMultisetMedium_RMS               26 %            26 %    
+ClearUnorderedMultisetMedium/1                  2459 ns         2193 ns       290921
+ClearUnorderedMultisetMedium/2                  2643 ns         2240 ns       227647
+ClearUnorderedMultisetMedium/4                  3130 ns         2639 ns       256174
+ClearUnorderedMultisetMedium/8                  4315 ns         3530 ns       197656
+ClearUnorderedMultisetMedium/16                 6232 ns         5124 ns       100000
+ClearUnorderedMultisetMedium/32                10485 ns         8546 ns        80850
+ClearUnorderedMultisetMedium/64                13967 ns        12165 ns        51448
+ClearUnorderedMultisetMedium/128               20900 ns        19220 ns        37433
+ClearUnorderedMultisetMedium/256               64390 ns        59374 ns        10000
+ClearUnorderedMultisetMedium/512               86063 ns        83620 ns         7909
+ClearUnorderedMultisetMedium/1024             244757 ns       243172 ns         3172
+ClearUnorderedMultisetMedium_BigO              23.32 NlgN      23.01 NlgN 
+ClearUnorderedMultisetMedium_RMS                  22 %            21 %    
+InsertUnorderedMultisetMedium/1                 2608 ns         2370 ns       297249
+InsertUnorderedMultisetMedium/2                 2593 ns         2335 ns       279712
+InsertUnorderedMultisetMedium/4                 3298 ns         2821 ns       255570
+InsertUnorderedMultisetMedium/8                 3478 ns         2862 ns       264271
+InsertUnorderedMultisetMedium/16                3722 ns         2878 ns       207663
+InsertUnorderedMultisetMedium/32                3802 ns         2790 ns       210524
+InsertUnorderedMultisetMedium/64                3324 ns         2356 ns       249148
+InsertUnorderedMultisetMedium/128               5781 ns         3698 ns       260053
+InsertUnorderedMultisetMedium_BigO           3575.74 (1)     2763.84 (1)  
+InsertUnorderedMultisetMedium_RMS                 26 %            15 %    
+EraseUnorderedMultisetMedium/1                  1324 ns         1251 ns       519739
+EraseUnorderedMultisetMedium/2                  1628 ns         1430 ns       533839
+EraseUnorderedMultisetMedium/4                  1512 ns         1334 ns       445898
+EraseUnorderedMultisetMedium/8                  1666 ns         1373 ns       530761
+EraseUnorderedMultisetMedium/16                 2053 ns         1577 ns       435514
+EraseUnorderedMultisetMedium/32                 2503 ns         1795 ns       337262
+EraseUnorderedMultisetMedium/64                 3139 ns         2097 ns       249508
+EraseUnorderedMultisetMedium/128                4403 ns         2803 ns       254470
+EraseUnorderedMultisetMedium_BigO            2278.42 (1)     1707.42 (1)  
+EraseUnorderedMultisetMedium_RMS                  43 %            29 %    
+EraseRangeUnorderedMultisetMedium/1             1171 ns         1132 ns       625559
+EraseRangeUnorderedMultisetMedium/2             1355 ns         1290 ns       540264
+EraseRangeUnorderedMultisetMedium/4             1741 ns         1629 ns       432227
+EraseRangeUnorderedMultisetMedium/8             2604 ns         2362 ns       303387
+EraseRangeUnorderedMultisetMedium/16            4164 ns         3690 ns       192981
+EraseRangeUnorderedMultisetMedium/32            8640 ns         7308 ns       109068
+EraseRangeUnorderedMultisetMedium/64           14941 ns        13051 ns        53226
+EraseRangeUnorderedMultisetMedium/128          21537 ns        20173 ns        33795
+EraseRangeUnorderedMultisetMedium_BigO        187.12 N        171.18 N    
+EraseRangeUnorderedMultisetMedium_RMS             26 %            22 %    
+SwapUnorderedMultisetMedium/1                   27.2 ns         27.2 ns     25013416
+SwapUnorderedMultisetMedium/2                   31.3 ns         31.0 ns     24455685
+SwapUnorderedMultisetMedium/4                   31.0 ns         30.9 ns     22245657
+SwapUnorderedMultisetMedium/8                   29.3 ns         29.1 ns     22414963
+SwapUnorderedMultisetMedium/16                  28.6 ns         28.4 ns     24963522
+SwapUnorderedMultisetMedium/32                  28.2 ns         28.1 ns     24669088
+SwapUnorderedMultisetMedium/64                  34.7 ns         34.6 ns     22035704
+SwapUnorderedMultisetMedium/128                 27.6 ns         27.5 ns     24780824
+SwapUnorderedMultisetMedium_BigO               29.73 (1)       29.58 (1)  
+SwapUnorderedMultisetMedium_RMS                    8 %             8 %    
+CountUnorderedMultisetMedium/1                  1646 ns         1644 ns       428520
+CountUnorderedMultisetMedium/2                  1623 ns         1620 ns       424302
+CountUnorderedMultisetMedium/4                  1719 ns         1714 ns       402852
+CountUnorderedMultisetMedium/8                  1723 ns         1718 ns       425636
+CountUnorderedMultisetMedium/16                 1656 ns         1656 ns       437818
+CountUnorderedMultisetMedium/32                 1644 ns         1643 ns       427807
+CountUnorderedMultisetMedium/64                 1638 ns         1638 ns       436887
+CountUnorderedMultisetMedium/128                1626 ns         1626 ns       427200
+CountUnorderedMultisetMedium/256                1634 ns         1629 ns       429474
+CountUnorderedMultisetMedium/512                1625 ns         1622 ns       432844
+CountUnorderedMultisetMedium/1024               1625 ns         1622 ns       431078
+CountUnorderedMultisetMedium/2048               1656 ns         1654 ns       432593
+CountUnorderedMultisetMedium/4096               1714 ns         1712 ns       394795
+CountUnorderedMultisetMedium/8192               1642 ns         1633 ns       423280
+CountUnorderedMultisetMedium/16384              1652 ns         1652 ns       422991
+CountUnorderedMultisetMedium/32768              1632 ns         1632 ns       425123
+CountUnorderedMultisetMedium_BigO            1653.45 (1)     1650.92 (1)  
+CountUnorderedMultisetMedium_RMS                   2 %             2 %    
+FindUnorderedMultisetMedium/1                   1792 ns         1792 ns       386079
+FindUnorderedMultisetMedium/2                   1784 ns         1784 ns       391948
+FindUnorderedMultisetMedium/4                   1804 ns         1804 ns       385824
+FindUnorderedMultisetMedium/8                   1797 ns         1797 ns       392701
+FindUnorderedMultisetMedium/16                  1785 ns         1785 ns       396058
+FindUnorderedMultisetMedium/32                  1794 ns         1794 ns       393905
+FindUnorderedMultisetMedium/64                  1795 ns         1794 ns       351049
+FindUnorderedMultisetMedium/128                 1783 ns         1783 ns       392135
+FindUnorderedMultisetMedium/256                 2095 ns         2095 ns       393835
+FindUnorderedMultisetMedium/512                 1810 ns         1810 ns       373038
+FindUnorderedMultisetMedium/1024                1827 ns         1826 ns       383337
+FindUnorderedMultisetMedium/2048                1825 ns         1825 ns       380985
+FindUnorderedMultisetMedium/4096                1826 ns         1826 ns       385223
+FindUnorderedMultisetMedium/8192                1845 ns         1844 ns       389726
+FindUnorderedMultisetMedium/16384               1796 ns         1796 ns       390333
+FindUnorderedMultisetMedium/32768               1794 ns         1794 ns       391198
+FindUnorderedMultisetMedium_BigO             1822.21 (1)     1821.72 (1)  
+FindUnorderedMultisetMedium_RMS                    4 %             4 %    
+Equal_rangeUnorderedMultisetMedium/32           1835 ns         1835 ns       381912
+Equal_rangeUnorderedMultisetMedium/64           1827 ns         1814 ns       382013
+Equal_rangeUnorderedMultisetMedium/128          1823 ns         1821 ns       383203
+Equal_rangeUnorderedMultisetMedium/256          1890 ns         1887 ns       374059
+Equal_rangeUnorderedMultisetMedium/512          1853 ns         1849 ns       383262
+Equal_rangeUnorderedMultisetMedium/1024         1835 ns         1832 ns       382445
+Equal_rangeUnorderedMultisetMedium/2048         1842 ns         1840 ns       380162
+Equal_rangeUnorderedMultisetMedium/4096         1834 ns         1830 ns       385306
+Equal_rangeUnorderedMultisetMedium/8192         1826 ns         1824 ns       378191
+Equal_rangeUnorderedMultisetMedium/16384        1865 ns         1862 ns       374579
+Equal_rangeUnorderedMultisetMedium/32768        1840 ns         1837 ns       375159
+Equal_rangeUnorderedMultisetMedium/65536        1848 ns         1847 ns       383970
+Equal_rangeUnorderedMultisetMedium/131072       1855 ns         1855 ns       370112
+Equal_rangeUnorderedMultisetMedium/262144       1996 ns         1996 ns       380145
+Equal_rangeUnorderedMultisetMedium_BigO      1854.97 (1)     1852.08 (1)  
+Equal_rangeUnorderedMultisetMedium_RMS             2 %             2 %    
+RehashUnorderedMultisetMedium/1                 1140 ns         1084 ns       649132
+RehashUnorderedMultisetMedium/2                 1207 ns         1114 ns       636378
+RehashUnorderedMultisetMedium/4                 1272 ns         1135 ns       601715
+RehashUnorderedMultisetMedium/8                 1567 ns         1285 ns       592686
+RehashUnorderedMultisetMedium/16                1922 ns         1449 ns       456305
+RehashUnorderedMultisetMedium/32                2475 ns         1705 ns       393586
+RehashUnorderedMultisetMedium/64                2867 ns         1883 ns       354795
+RehashUnorderedMultisetMedium/128               3524 ns         2277 ns       326515
+RehashUnorderedMultisetMedium_BigO           1996.82 (1)     1491.37 (1)  
+RehashUnorderedMultisetMedium_RMS                 41 %            27 %    
+ReserveUnorderedMultisetMedium/1                1126 ns         1076 ns       511957
+ReserveUnorderedMultisetMedium/2                1177 ns         1099 ns       641807
+ReserveUnorderedMultisetMedium/4                1258 ns         1136 ns       566975
+ReserveUnorderedMultisetMedium/8                1723 ns         1388 ns       578055
+ReserveUnorderedMultisetMedium/16               2508 ns         1780 ns       508846
+ReserveUnorderedMultisetMedium/32               4309 ns         2801 ns       237757
+ReserveUnorderedMultisetMedium/64               3654 ns         2301 ns       363694
+ReserveUnorderedMultisetMedium/128              4646 ns         2903 ns       291093
+ReserveUnorderedMultisetMedium_BigO           677.79 lgN      448.50 lgN  
+ReserveUnorderedMultisetMedium_RMS                23 %            29 %    

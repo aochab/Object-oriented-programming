@@ -23,7 +23,7 @@ static void FrontForwardListMedium(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(FrontForwardListMedium)->RangeMultiplier(2)->Range(1, 1<<18)->Complexity();
+BENCHMARK(FrontForwardListMedium)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 //============================================================================================
 
@@ -127,7 +127,7 @@ static void InsertAfterForwardListMedium(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(InsertAfterForwardListMedium)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(InsertAfterForwardListMedium)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 static void InsertAfterCountForwardListMedium(State& state) {
 
@@ -154,7 +154,7 @@ static void InsertAfterCountForwardListMedium(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(InsertAfterCountForwardListMedium)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(InsertAfterCountForwardListMedium)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 static void InsertAfterRangeForwardListMedium(State& state) {
 
@@ -186,7 +186,7 @@ static void InsertAfterRangeForwardListMedium(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(InsertAfterRangeForwardListMedium)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(InsertAfterRangeForwardListMedium)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //============================================================================================
 
@@ -215,7 +215,7 @@ static void EraseAfterForwardListMedium(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(EraseAfterForwardListMedium)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(EraseAfterForwardListMedium)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 static void EraseAfterRangeForwardListMedium(State& state) {
 
@@ -245,7 +245,7 @@ static void EraseAfterRangeForwardListMedium(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(EraseAfterRangeForwardListMedium)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(EraseAfterRangeForwardListMedium)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //============================================================================================
 
@@ -273,7 +273,7 @@ static void PushFrontForwardListMedium(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(PushFrontForwardListMedium)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(PushFrontForwardListMedium)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //============================================================================================
 
@@ -300,7 +300,7 @@ static void ResizeForwardListMedium(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(ResizeForwardListMedium)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ResizeForwardListMedium)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //============================================================================================
 
@@ -329,7 +329,7 @@ static void SwapForwardListMedium(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(SwapForwardListMedium)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(SwapForwardListMedium)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 
 //============================================================================================
@@ -366,7 +366,7 @@ static void MergeForwardListMedium(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(MergeForwardListMedium)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(MergeForwardListMedium)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //============================================================================================
 
@@ -400,7 +400,7 @@ static void SpliceAfterForwardListMedium(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(SpliceAfterForwardListMedium)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(SpliceAfterForwardListMedium)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //============================================================================================
 
@@ -428,7 +428,7 @@ static void RemoveForwardListMedium(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(RemoveForwardListMedium)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(RemoveForwardListMedium)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //============================================================================================
 
@@ -456,7 +456,7 @@ static void RemoveIfForwardListMedium(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(RemoveIfForwardListMedium)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(RemoveIfForwardListMedium)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //============================================================================================
 
@@ -479,7 +479,7 @@ static void ReverseForwardListMedium(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(ReverseForwardListMedium)->RangeMultiplier(2)->Range(1<<5, 1<<20)->Complexity();
+BENCHMARK(ReverseForwardListMedium)->RangeMultiplier(2)->Range(1<<5, 128)->Complexity();
 
 //============================================================================================
 
@@ -507,7 +507,7 @@ static void UniqueForwardListMedium(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(UniqueForwardListMedium)->RangeMultiplier(2)->Range(1<<5, 1<<18)->Complexity();
+BENCHMARK(UniqueForwardListMedium)->RangeMultiplier(2)->Range(1<<5, 128)->Complexity();
 
 //============================================================================================
 
@@ -535,4 +535,4 @@ static void SortForwardListMedium(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(SortForwardListMedium)->RangeMultiplier(2)->Range(1<<5, 1<<18)->Complexity();
+BENCHMARK(SortForwardListMedium)->RangeMultiplier(2)->Range(1<<5, 128)->Complexity();

@@ -97,7 +97,7 @@ static void ClearUnorderedMultisetLarge(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(ClearUnorderedMultisetLarge)->RangeMultiplier(2)->Range(1<<5, 1<<15)->Complexity();
+BENCHMARK(ClearUnorderedMultisetLarge)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 //========================================================================================
 
@@ -128,7 +128,7 @@ static void InsertUnorderedMultisetLarge(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(InsertUnorderedMultisetLarge)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(InsertUnorderedMultisetLarge)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //========================================================================================
 
@@ -157,7 +157,7 @@ static void EraseUnorderedMultisetLarge(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(EraseUnorderedMultisetLarge)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(EraseUnorderedMultisetLarge)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //========================================================================================
 
@@ -187,7 +187,7 @@ static void EraseRangeUnorderedMultisetLarge(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(EraseRangeUnorderedMultisetLarge)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(EraseRangeUnorderedMultisetLarge)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //========================================================================================
 
@@ -216,7 +216,7 @@ static void SwapUnorderedMultisetLarge(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(SwapUnorderedMultisetLarge)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(SwapUnorderedMultisetLarge)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //========================================================================================
 
@@ -316,7 +316,7 @@ static void RehashUnorderedMultisetLarge(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(RehashUnorderedMultisetLarge)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(RehashUnorderedMultisetLarge)->RangeMultiplier(2)->Range(1, 128)->Complexity();
 
 //========================================================================================
 
@@ -343,4 +343,4 @@ static void ReserveUnorderedMultisetLarge(State& state) {
     state.SetComplexityN(N);
 }
 
-BENCHMARK(ReserveUnorderedMultisetLarge)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ReserveUnorderedMultisetLarge)->RangeMultiplier(2)->Range(1, 128)->Complexity();
