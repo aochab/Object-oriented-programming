@@ -10,10 +10,13 @@ public:
     explicit Speed(QObject *parent = nullptr);
 
 signals:
-        void changed(double v);
+    void changed(double v);
 
 public slots:
-        void onDisplacementChanged(double v);
+    void onDisplacementChange(double v);
+
+private:
+    double displacement;
 };
 
 #endif // SPEED_H

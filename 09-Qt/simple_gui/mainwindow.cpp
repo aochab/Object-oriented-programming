@@ -10,9 +10,8 @@ MainWindow::MainWindow(QWidget *parent) :
     speed = new Speed(this);
     acceleration = new Acceleration(this);
 
-
     connect(displacement, SIGNAL(changed(double)),
-            speed, SLOT(onDisplacementChanged(double)));
+            speed, SLOT(onDisplacementChange(double)));
     connect(speed, SIGNAL(changed(double)),
             acceleration, SLOT(onSpeedChange(double)));
 
@@ -34,14 +33,4 @@ void MainWindow::on_pushButton_clicked()
 {
     auto value = ui->lineEditDisplacement->text().toDouble();
     displacement->set(value);
-}
-
-void MainWindow::on_lineEdit_textChanged(const QString &arg1)
-{
-
-}
-
-void MainWindow::on_lineEdit_textEdited(const QString &arg1)
-{
-
 }

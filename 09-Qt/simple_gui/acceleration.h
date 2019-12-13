@@ -10,9 +10,13 @@ public:
     explicit Acceleration(QObject *parent = nullptr);
 
 signals:
+    void changed(double v);
 
 public slots:
-        void onSpeedChanged(double v);
+    void onSpeedChange(double v);
+
+private:
+    double speed;
 };
 
 #endif // ACCELERATION_H
