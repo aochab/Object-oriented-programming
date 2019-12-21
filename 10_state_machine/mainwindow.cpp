@@ -12,30 +12,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-/*
- * State machine example implementation
- *
- *   auto stateMachine = new QStateMachine(this);//this podopipnamy pod okno nasza maszyne
- *
- *   auto greenState = new QState(stateMachine); //stany podpinamy pod maszyne stany
- *   auto yellowState = new QState(stateMachine);
- *   auto redState = new QState(stateMachine);
- *   auto logState = new QState(stateMachine);
- *
- *   greenState->assignProperty(ui->pbToggle,"text","GREEN"); //mowimy jak ma wygladac gui w tym konkretnym stanie
- *   yellowState->assignProperty(ui->pbToggle,"text","YELLOW");
- *   redState->assignProperty(ui->pbToggle,"text","RED");
- *
- *   greenState->addTransition(ui->pbToggle, SIGNAL(clicked()),redState);
- *   redState->addTransition(ui->pbToggle, SIGNAL(clicked()),yellowState);
- *   yellowState->addTransition(ui->pbToggle, SIGNAL(clicked()), logState);
- *   logState->addTransition(this, SIGNAL(done()),greenState);
- *
- *   connect(logState, SIGNAL(entered()), this, SLOT(log()));
- *
- *   stateMachine->setInitialState(greenState);
- *   stateMachine->start();
- */
 
     auto stateMachine = new QStateMachine(this);
 
@@ -47,6 +23,8 @@ MainWindow::MainWindow(QWidget *parent) :
     auto saveState = new QState(unlockedState);
     auto editState = new QState(unlockedState);
     auto lockedState = new QState(stateMachine);
+
+    auto historyState = new QHistoryState(unlockedState);
 
     unlockedState->assignProperty(ui->pbToggle,"text","Lock");
     unlockedState->assignProperty(ui->pbOpen,"enabled",true);
@@ -76,6 +54,8 @@ MainWindow::MainWindow(QWidget *parent) :
     lockedState->assignProperty(ui->pbSave,"enabled",false);
     lockedState->assignProperty(ui->teText,"enabled",false);
 
+    unlockedState->addTransition(ui->pbToggle,SIGNAL(clicked(bool)),lockedState);
+
     startupState->addTransition(ui->pbOpen,SIGNAL(clicked(bool)),openState);
 
     openState->addTransition(this,SIGNAL(error()),errorState);
@@ -90,9 +70,8 @@ MainWindow::MainWindow(QWidget *parent) :
     saveState->addTransition(this,SIGNAL(error()),errorState);
 
     errorState->addTransition(ui->pbOpen,SIGNAL(clicked(bool)),openState);
-    errorState->addTransition(ui->pbToggle,SIGNAL(clicked(bool)),lockedState);
 
-    lockedState->addTransition(ui->pbToggle,SIGNAL(clicked(bool)),errorState);
+    lockedState->addTransition(ui->pbToggle,SIGNAL(clicked(bool)),historyState);
 
     connect(openState, SIGNAL(entered()), this, SLOT(open()));
     connect(saveState, SIGNAL(entered()), this, SLOT(save()));
@@ -109,16 +88,18 @@ MainWindow::~MainWindow()
 
 void MainWindow::open()
 {
-    fileName = QFileDialog::getOpenFileName(this, tr("Open file"));
+    fileName = QFileDialog::getOpenFileName(this, tr("Open file"),
+                                            "/home/student/OOP/oop_2019_g2_adrian_ochab/10_state_machine");
     if( fileName.isEmpty())
         emit error();
     else {
         QFile file(fileName);
-        if(!file.open(QIODevice::ReadWrite|QFile::Text)) {
+        if(!file.open(QIODevice::ReadOnly|QFile::Text)) {
             emit error();
         }
         else {
             ui->teText->setText(file.readAll());
+            file.close();
             emit opened();
         }
     }
@@ -133,14 +114,12 @@ void MainWindow::save()
         if(!file.open(QIODevice::WriteOnly|QFile::Text)) {
             emit error();
         } else {
-            //ui->teText->setText(file.readAll());
             QTextStream stream(&file);
-            stream << ui->teText->//wyslac tekst
+            stream << ui->teText->toPlainText();
+            file.close();
             emit saved();
         }
-
     }
-    // TODO: Save file and emit 'saved' if succeeded
 }
 
 void MainWindow::log()
