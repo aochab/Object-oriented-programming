@@ -18,9 +18,6 @@ private slots:
 
         QCOMPARE(1,spy.count());
 
-        //demo.property("value"); mozemy bawic sie tymi property
-        //demo.setProperty("value",10);
-
     }
 
 };

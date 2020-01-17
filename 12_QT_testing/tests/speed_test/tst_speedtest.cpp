@@ -8,34 +8,48 @@ class SpeedTest : public QObject
 
 
 private slots:
-    void test_case1();
+    void test_get();
+    void test_property();
 
 };
 
 
-void SpeedTest::test_case1()
+void SpeedTest::test_get()
 {
     Speed speed{};
 
     QSignalSpy spy{&speed,SIGNAL(changed(double))};
-//onChanged dodac z liczbą i nie dodawac displacement
-    speed.setProperty("value",10);
 
-    speed.get();
+    speed.onChange(3);
 
-    QCOMPARE(5, speed.get());
+    QCOMPARE(3, speed.get());
 
     QCOMPARE(1,spy.count());
 
-    QCOMPARE(5,spy.at(0).value(0));
+    QCOMPARE(3,spy.at(0).value(0));
 
+    speed.onChange(5);
 
-
-    QCOMPARE(10, speed.get());
+    QCOMPARE(2, speed.get());
 
     QCOMPARE(2,spy.count());
 
-    QCOMPARE(10,spy.at(1).value(0));
+    QCOMPARE(2,spy.at(1).value(0));
+
+}
+
+
+void SpeedTest::test_property()
+{
+    Speed speed{};
+
+    QSignalSpy spy{&speed,SIGNAL(changed(double))};
+
+    speed.setProperty("value",10);
+
+    QCOMPARE(0,spy.count());
+
+    QCOMPARE(0,speed.property("value"));
 }
 
 QTEST_APPLESS_MAIN(SpeedTest)

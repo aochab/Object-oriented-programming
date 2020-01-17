@@ -10,6 +10,7 @@ class DisplacementTest : public QObject
 
 private slots:
     void test_setget();
+    void test_property();
 
 };
 
@@ -27,13 +28,26 @@ void DisplacementTest::test_setget()
 
     QCOMPARE(5,spy.at(0).value(0));
 
-    displacement.setProperty("value",10);
+    displacement.set(8);
 
-    QCOMPARE(10, displacement.get());
+    QCOMPARE(8, displacement.get());
 
     QCOMPARE(2,spy.count());
 
-    QCOMPARE(10,spy.at(1).value(0));
+    QCOMPARE(8,spy.at(1).value(0));
+
+}
+
+
+void DisplacementTest::test_property()
+{
+    Displacement displacement{};
+
+    QSignalSpy spy{&displacement,SIGNAL(changed(double))};
+
+    displacement.setProperty("value",10);
+
+    QCOMPARE(1,spy.count());
 
     QCOMPARE(10,displacement.property("value"));
 }
