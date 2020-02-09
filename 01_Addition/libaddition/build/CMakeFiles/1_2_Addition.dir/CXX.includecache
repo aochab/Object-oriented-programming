@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/student/OOP/1.2_Addition/libaddition/Addition.cpp
+Addition.h
+/home/student/OOP/1.2_Addition/libaddition/Addition.h
+
+/home/student/OOP/1.2_Addition/libaddition/Addition.h
+
