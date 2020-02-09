@@ -1,3 +1,0 @@
-/home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/cmake-build-debug/CMakeFiles/Test_Addition.dir
-/home/student/OOP/Zadania/oop_2019_g2_adrian_ochab/1.2_Addition/Test_Addition/cmake-build-debug/CMakeFiles/edit_cache.dir

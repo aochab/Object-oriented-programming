@@ -1,3 +1,0 @@
-/home/student/OOP/1.2_Addition/libaddition/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/student/OOP/1.2_Addition/libaddition/cmake-build-debug/CMakeFiles/1_2_Addition.dir
-/home/student/OOP/1.2_Addition/libaddition/cmake-build-debug/CMakeFiles/edit_cache.dir

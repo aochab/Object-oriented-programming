@@ -1,2 +1,0 @@
-/usr/bin/ar qc lib1_2_Addition.a  CMakeFiles/1_2_Addition.dir/Addition.cpp.o
-/usr/bin/ranlib lib1_2_Addition.a
